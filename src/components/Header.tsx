@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -14,8 +14,15 @@ const Header = () => {
   return (
     <header className="shadow-sm sticky top-0 bg-white z-50">
       <div className="container mx-auto flex justify-between items-center py-4">
-        <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold text-blue-600">ClaimMasters Dental Billing</span>
+        <Link href="/" className="flex items-center gap-3">
+          <Image 
+            src="/images/Asset 4.png" 
+            alt="ClaimMasters Dental Billing Logo" 
+            width={200} 
+            height={200} 
+            className="h-12 w-auto"
+          />
+          <span className="text-xl font-bold text-blue-600 hidden sm:inline">ClaimMasters Dental Billing</span>
         </Link>
 
         {/* Mobile menu button */}

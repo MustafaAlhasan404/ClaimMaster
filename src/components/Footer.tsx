@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -38,8 +39,8 @@ const Footer = () => {
               <p className="mb-4">Austin, Texas 78705</p>
               
               <p className="mb-2">
-                <a href="mailto:info@zapdentalbilling.com" className="hover:text-blue-300">
-                  info@zapdentalbilling.com
+                <a href="mailto:info@claimmastersdentalbilling.com" className="hover:text-blue-300">
+                  info@claimmastersdentalbilling.com
                 </a>
               </p>
               
@@ -81,6 +82,16 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
+        
+        <div className="flex flex-col items-center mb-8">
+          <Image 
+            src="/images/Asset 4.png" 
+            alt="ClaimMasters Dental Billing Logo" 
+            width={150} 
+            height={150} 
+            className="h-20 w-auto mb-4"
+          />
         </div>
         
         <div className="border-t border-gray-700 pt-8 text-center text-sm">

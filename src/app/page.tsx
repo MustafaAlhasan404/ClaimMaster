@@ -1,15 +1,25 @@
-import Image from "next/image";
+import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ContactForm from '../components/ContactForm';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-white">
       {/* Hero Section */}
       <section className="bg-blue-50 py-16 md:py-24">
         <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div>
+            <div className="flex justify-center md:justify-start mb-6">
+              <Image 
+                src="/images/Asset 4.png" 
+                alt="ClaimMasters Dental Billing Logo" 
+                width={250} 
+                height={250} 
+                className="h-24 w-auto"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
               Your Trusted Dental Billing Company
             </h1>
@@ -69,11 +79,14 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service 1 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                {/* Replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Dental Equipment Image]
-                </div>
+              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
+                <Image 
+                  src="/images/Asset 4.png" 
+                  alt="Insurance Verification" 
+                  width={120} 
+                  height={120} 
+                  className="h-24 w-auto"
+                />
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Dental Insurance Eligibility Verification</h4>
@@ -88,16 +101,19 @@ export default function Home() {
 
             {/* Service 2 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                {/* Replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Patient Appointment Image]
-                </div>
+              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
+                <Image 
+                  src="/images/Asset 4.png" 
+                  alt="Insurance Billing" 
+                  width={120} 
+                  height={120} 
+                  className="h-24 w-auto"
+                />
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Dental Insurance Billing and AR/Collection</h4>
                 <p className="mb-4">
-                  Zap Dental team is here to make it quick and convenient for you to track and collect any outstanding claims and payments from insurance companies. Get paid what you are owed.
+                  ClaimMasters team is here to make it quick and convenient for you to track and collect any outstanding claims and payments from insurance companies. Get paid what you are owed.
                 </p>
                 <Link href="/services/insurance-billing" className="text-blue-600 hover:underline font-medium">
                   Learn more →
@@ -107,11 +123,14 @@ export default function Home() {
 
             {/* Service 3 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                {/* Replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Doctor and Patient Image]
-                </div>
+              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
+                <Image 
+                  src="/images/Asset 4.png" 
+                  alt="Patient Follow-ups" 
+                  width={120} 
+                  height={120} 
+                  className="h-24 w-auto"
+                />
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Patient Follow-ups/Fill the Chair</h4>
@@ -126,11 +145,14 @@ export default function Home() {
 
             {/* Service 4 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                {/* Replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Dental Equipment Image]
-                </div>
+              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
+                <Image 
+                  src="/images/Asset 4.png" 
+                  alt="Appointment Scheduling" 
+                  width={120} 
+                  height={120} 
+                  className="h-24 w-auto"
+                />
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Appointment Scheduling</h4>
@@ -145,11 +167,14 @@ export default function Home() {
 
             {/* Service 5 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                {/* Replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Dentist Examining Patient Image]
-                </div>
+              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
+                <Image 
+                  src="/images/Asset 4.png" 
+                  alt="Appointment Confirmation" 
+                  width={120} 
+                  height={120} 
+                  className="h-24 w-auto"
+                />
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Appointment Confirmation</h4>
@@ -164,11 +189,14 @@ export default function Home() {
 
             {/* Service 6 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gray-300 relative">
-                {/* Replace with actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  [Doctor Image]
-                </div>
+              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
+                <Image 
+                  src="/images/Asset 4.png" 
+                  alt="Inbound and Outbound Calls" 
+                  width={120} 
+                  height={120} 
+                  className="h-24 w-auto"
+                />
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Inbound and Outbound Calls</h4>
@@ -219,6 +247,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -275,7 +275,7 @@ export default function DentalAccounting() {
                   </svg>
                 </div>
                 <p className="text-gray-600 italic mb-4">
-                  "Switching to ClaimMasters Dental Billing for our accounting needs was one of the best business decisions we've made. Their team helped us streamline our financial processes, identify areas for cost reduction, and implement efficient tax strategies. We've seen a 15% increase in net profitability since partnering with them."
+                  &quot;Switching to ClaimMasters Dental Billing for our accounting needs was one of the best business decisions we&apos;ve made. Their team helped us streamline our financial processes, identify areas for cost reduction, and implement efficient tax strategies. We&apos;ve seen a 15% increase in net profitability since partnering with them.&quot;
                 </p>
                 <div>
                   <p className="font-semibold">Dr. Michael Reynolds</p>
@@ -334,14 +334,14 @@ export default function DentalAccounting() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Will I still have access to my financial information?</h3>
               <p className="text-gray-700">
-                Absolutely! We believe in complete transparency. You'll maintain full access to your financial system and data at all times. Additionally, we provide secure, customized dashboards that give you real-time visibility into your practice's key financial metrics and performance indicators.
+                Absolutely! We believe in complete transparency. You&apos;ll maintain full access to your financial system and data at all times. Additionally, we provide secure, customized dashboards that give you real-time visibility into your practice&apos;s key financial metrics and performance indicators.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">How often will I receive financial reports?</h3>
               <p className="text-gray-700">
-                We provide standard monthly financial reports including profit and loss statements, balance sheets, and cash flow analysis. We also offer customized reporting schedules based on your practice's needs, whether that's weekly cash flow updates, quarterly profitability analysis, or annual financial reviews.
+                We provide standard monthly financial reports including profit and loss statements, balance sheets, and cash flow analysis. We also offer customized reporting schedules based on your practice&apos;s needs, whether that&apos;s weekly cash flow updates, quarterly profitability analysis, or annual financial reviews.
               </p>
             </div>
             

@@ -142,7 +142,7 @@ export default function About() {
       {/* Call to Action */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Dental Practice's Billing?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Dental Practice&apos;s Billing?</h2>
           <p className="text-lg mb-8">
             Schedule a free consultation to learn how ClaimMasters Dental Billing can help your practice increase collections and reduce administrative burden.
           </p>

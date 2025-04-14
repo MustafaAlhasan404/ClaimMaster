@@ -288,7 +288,7 @@ export default function InsuranceBilling() {
                   </svg>
                 </div>
                 <p className="text-gray-600 italic mb-4">
-                  "Since partnering with ClaimMasters Dental Billing, our collections have increased by 22% and our average days in AR have decreased from 45 to just 28 days. Their team is responsive, knowledgeable, and truly acts as an extension of our practice."
+                  &quot;Since partnering with ClaimMasters Dental Billing, our collections have increased by 22% and our average days in AR have decreased from 45 to just 28 days. Their team is responsive, knowledgeable, and truly acts as an extension of our practice.&quot;
                 </p>
                 <div>
                   <p className="font-semibold">Dr. Jennifer Martinez</p>

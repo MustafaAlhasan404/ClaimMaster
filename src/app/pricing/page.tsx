@@ -15,7 +15,7 @@ export default function Pricing() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">Pricing & Plans</h1>
             <p className="text-lg mb-8">
-              Customized and affordable solutions designed to fit your practice's unique needs
+              Customized and affordable solutions designed to fit your practice&apos;s unique needs
             </p>
           </div>
         </div>
@@ -28,7 +28,7 @@ export default function Pricing() {
             <h2 className="text-3xl font-bold mb-6">Transparent & Flexible Pricing</h2>
             <p className="text-lg text-gray-600">
               We understand that every dental practice has unique needs and challenges.
-              That's why we offer tailored packages that scale with your practice size and requirements.
+              That&apos;s why we offer tailored packages that scale with your practice size and requirements.
             </p>
           </div>
           
@@ -227,21 +227,21 @@ export default function Pricing() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Do you require a long-term contract?</h3>
               <p className="text-gray-700">
-                No, all of our services are offered on a month-to-month basis. We're confident in the value we provide, so we don't lock you into long-term contracts.
+                No, all of our services are offered on a month-to-month basis. We&apos;re confident in the value we provide, so we don&apos;t lock you into long-term contracts.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Can I upgrade or downgrade my plan?</h3>
               <p className="text-gray-700">
-                Yes, you can easily upgrade or downgrade your plan at any time to accommodate changes in your practice's needs or budget.
+                Yes, you can easily upgrade or downgrade your plan at any time to accommodate changes in your practice&apos;s needs or budget.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Are there any setup fees?</h3>
               <p className="text-gray-700">
-                For our Starter and Professional plans, there's a one-time setup fee of $250 to cover onboarding and system integration. This fee is waived for annual subscriptions and for Enterprise plans.
+                For our Starter and Professional plans, there&apos;s a one-time setup fee of $250 to cover onboarding and system integration. This fee is waived for annual subscriptions and for Enterprise plans.
               </p>
             </div>
             
@@ -258,9 +258,9 @@ export default function Pricing() {
       {/* Call to Action */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Optimize Your Dental Practice's Revenue?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Optimize Your Dental Practice&apos;s Revenue?</h2>
           <p className="text-lg mb-8">
-            Get started today with our risk-free trial and see how ClaimMasters Dental Billing can transform your practice's financial performance.
+            Get started today with our risk-free trial and see how ClaimMasters Dental Billing can transform your practice&apos;s financial performance.
           </p>
           <Link 
             href="/contact" 

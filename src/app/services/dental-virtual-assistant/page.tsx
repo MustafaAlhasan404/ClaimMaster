@@ -289,7 +289,7 @@ export default function DentalVirtualAssistant() {
                   </svg>
                 </div>
                 <p className="text-gray-600 italic mb-4">
-                  "Our virtual assistant has been a game-changer for our practice. She handles all our appointment confirmations, insurance verifications, and recall management, which has reduced our no-show rate by 35% and freed up our front desk team to focus on patient experience."
+                  &quot;Our virtual assistant has been a game-changer for our practice. She handles all our appointment confirmations, insurance verifications, and recall management, which has reduced our no-show rate by 35% and freed up our front desk team to focus on patient experience.&quot;
                 </p>
                 <div>
                   <p className="font-semibold">Dr. Emily Roberts</p>
@@ -384,21 +384,21 @@ export default function DentalVirtualAssistant() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">What hours can our virtual assistant work?</h3>
               <p className="text-gray-700">
-                Our virtual assistants can work during your regular office hours, extended hours, or a customized schedule based on your specific needs. Many practices benefit from having virtual support during peak call times or for after-hours appointment scheduling. We offer flexible scheduling options, including full-time (40 hours per week), part-time (20-30 hours per week), or task-based arrangements. Your dedicated assistant's schedule will be established during the implementation process and can be adjusted as your needs evolve.
+                Our virtual assistants can work during your regular office hours, extended hours, or a customized schedule based on your specific needs. Many practices benefit from having virtual support during peak call times or for after-hours appointment scheduling. We offer flexible scheduling options, including full-time (40 hours per week), part-time (20-30 hours per week), or task-based arrangements. Your dedicated assistant&apos;s schedule will be established during the implementation process and can be adjusted as your needs evolve.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">What happens if our regular virtual assistant is unavailable?</h3>
               <p className="text-gray-700">
-                We have a comprehensive backup system in place to ensure continuity of service. Each primary virtual assistant has a designated backup who is cross-trained on your practice's specific procedures and systems. In case of planned time off or unexpected absence, the backup assistant steps in seamlessly. Additionally, our management team provides oversight to ensure all tasks are completed according to your standards, even during transition periods. This redundancy ensures your practice operations continue without interruption.
+                We have a comprehensive backup system in place to ensure continuity of service. Each primary virtual assistant has a designated backup who is cross-trained on your practice&apos;s specific procedures and systems. In case of planned time off or unexpected absence, the backup assistant steps in seamlessly. Additionally, our management team provides oversight to ensure all tasks are completed according to your standards, even during transition periods. This redundancy ensures your practice operations continue without interruption.
               </p>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Can virtual assistants handle patient phone calls?</h3>
               <p className="text-gray-700">
-                Yes, our virtual assistants can manage incoming and outgoing patient calls using VoIP technology that integrates with your practice's phone system. They can handle appointment scheduling, confirmations, recalls, and general inquiries just as an in-office receptionist would. Calls can be routed based on your preferences, and our assistants are trained to represent your practice professionally while following your communication protocols. Many practices find that having virtual assistants handle routine calls significantly reduces the workload for in-office staff.
+                Yes, our virtual assistants can manage incoming and outgoing patient calls using VoIP technology that integrates with your practice&apos;s phone system. They can handle appointment scheduling, confirmations, recalls, and general inquiries just as an in-office receptionist would. Calls can be routed based on your preferences, and our assistants are trained to represent your practice professionally while following your communication protocols. Many practices find that having virtual assistants handle routine calls significantly reduces the workload for in-office staff.
               </p>
             </div>
           </div>

@@ -290,7 +290,7 @@ export default function InsuranceVerification() {
                   </svg>
                 </div>
                 <p className="text-gray-600 italic mb-4">
-                  "Outsourcing our insurance verification to ClaimMasters Dental Billing has been a game-changer. Our front desk team saves 15-20 hours weekly, our claim acceptance rate has improved by 23%, and our patients appreciate knowing exactly what they'll owe before treatment."
+                  &quot;Outsourcing our insurance verification to ClaimMasters Dental Billing has been a game-changer. Our front desk team saves 15-20 hours weekly, our claim acceptance rate has improved by 23%, and our patients appreciate knowing exactly what they&apos;ll owe before treatment.&quot;
                 </p>
                 <div>
                   <p className="font-semibold">Dr. Thomas Wilson</p>
