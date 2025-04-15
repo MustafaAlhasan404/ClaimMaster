@@ -2,15 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-  --primary-color: #0056b3;
-  --secondary-color: #f8f9fa;
-  --accent-color: #ff6b00;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  @apply text-gray-800;
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
@@ -27,5 +24,30 @@ body {
   
   .section-padding {
     @apply py-16 md:py-24;
+  }
+}
+
+/* Add this to enable smooth transitions */
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  /* Create smooth transition for page changes */
+  .page-transition-entering {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .page-transition-entered {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .page-transition-exiting {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 }

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const Header = () => {
         </Link>
 
         {/* Mobile menu button */}
-        <motion.button
+        <m.button
           className="md:hidden flex items-center"
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -55,7 +55,7 @@ const Header = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
-        </motion.button>
+        </m.button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
@@ -115,7 +115,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div 
+          <m.div 
             className="md:hidden bg-white border-t overflow-hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -123,13 +123,13 @@ const Header = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <div className="container mx-auto py-3">
-              <motion.nav 
+              <m.nav 
                 className="flex flex-col gap-3"
                 initial={{ y: -20 }}
                 animate={{ y: 0 }}
                 transition={{ staggerChildren: 0.1, delayChildren: 0.1 }}
               >
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2 }}
@@ -137,8 +137,8 @@ const Header = () => {
                   <Link href="/" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Home
                   </Link>
-                </motion.div>
-                <motion.div
+                </m.div>
+                <m.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.05 }}
@@ -146,8 +146,8 @@ const Header = () => {
                   <Link href="/about" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     About
                   </Link>
-                </motion.div>
-                <motion.div
+                </m.div>
+                <m.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
@@ -155,8 +155,8 @@ const Header = () => {
                   <Link href="/pricing" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Pricing & Plans
                   </Link>
-                </motion.div>
-                <motion.div
+                </m.div>
+                <m.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.15 }}
@@ -179,7 +179,7 @@ const Header = () => {
                   </div>
                   <AnimatePresence>
                     {mobileServicesOpen && (
-                      <motion.div 
+                      <m.div 
                         className="pl-4 flex flex-col gap-2 overflow-hidden"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
@@ -198,11 +198,11 @@ const Header = () => {
                         <Link href="/services/accounting" className="py-1 text-sm hover:text-blue-600 transition-colors duration-200">
                           Dental Accounting & Bookkeeping
                         </Link>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
-                </motion.div>
-                <motion.div
+                </m.div>
+                <m.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.2 }}
@@ -210,8 +210,8 @@ const Header = () => {
                   <Link href="/blog" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Blog
                   </Link>
-                </motion.div>
-                <motion.div
+                </m.div>
+                <m.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.25 }}
@@ -219,10 +219,10 @@ const Header = () => {
                   <Link href="/contact" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Contact
                   </Link>
-                </motion.div>
-              </motion.nav>
+                </m.div>
+              </m.nav>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

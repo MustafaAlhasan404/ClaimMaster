@@ -5,41 +5,36 @@ import { useState, useEffect } from 'react';
 const testimonials = [
   {
     id: 1,
-    name: 'Luis Molina',
-    content: 'ClaimMasters Dental Billing has been an absolute game-changer for our practice! Their team is incredibly knowledgeable, efficient, and always on top of every detail. From handling insurance claims to managing our accounts receivable, they make the entire billing process seamless and stress-free. Fred and his team go above and beyond for our office! Our collections have improved, and we\'ve seen a significant reduction in claim denials thanks to their expertise. Their customer service is top-notch—responsive, professional, and genuinely dedicated to helping our practice succeed. If you\'re looking for a reliable dental billing partner, look no further than ClaimMasters Dental Billing. Highly recommended!',
-  },
-  {
-    id: 2,
     name: 'Dilan Talsida',
     content: 'They do an excellent job! We have multiple offices with Curve and Dentrix and they are able to work with both softwares!',
   },
   {
-    id: 3,
+    id: 2,
     name: 'Antonia Holderbaum (Toni)',
     content: 'Zayne from ClaimMasters Dental Billing has helped me so much! When it comes to updating me or answering any questions I have he responds back very quickly. I am satisfied with the care given.',
   },
   {
-    id: 4,
+    id: 3,
     name: 'Harshiv Vyas',
     content: 'Zap\'s customer service has been outstanding. Arsen, Albert and Austin are very hardworking and sincere. Over the past few years, they have been a great asset to our team. Would highly recommend them.',
   },
   {
-    id: 5,
+    id: 4,
     name: 'Deepa Sreenivasan',
     content: 'The billing and insurance verification service has been great! They are very detail oriented and communicative. I highly recommend this business to help your practice grow and thrive',
   },
   {
-    id: 6,
+    id: 5,
     name: 'Jasmin Ortiz',
     content: 'Zap dental is great. Very fast and efficient. They are very knowledgable as well with everything. Great company! Everyone is sweet.',
   },
   {
-    id: 7,
+    id: 6,
     name: 'Kricket Koehn',
     content: 'I have thoroughly enjoyed services with ClaimMasters Dental Billing. They are very through and have done the absolute best helping our patients understanding their dental billing. Thank you!',
   },
   {
-    id: 8,
+    id: 7,
     name: 'Men Le',
     content: 'I love the servicer from Erika who helped me to get through tough questions and multiple calls with kindness.',
   },

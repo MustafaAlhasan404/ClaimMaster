@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import WhatsAppChat from "../components/WhatsAppChat";
+import { Providers } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,9 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <WhatsAppChat />
+        </Providers>
       </body>
     </html>
   );

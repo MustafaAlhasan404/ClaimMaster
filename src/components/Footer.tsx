@@ -86,7 +86,7 @@ const Footer = () => {
         
         <div className="flex flex-col items-center mb-8">
           <Image 
-            src="/images/Asset 4.png" 
+            src="/images/Asset 1 2.png" 
             alt="ClaimMasters Dental Billing Logo" 
             width={150} 
             height={150} 
