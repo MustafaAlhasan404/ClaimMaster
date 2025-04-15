@@ -9,7 +9,7 @@ const WhatsAppChat = () => {
   const [message, setMessage] = useState('');
   const [isAnimating, setIsAnimating] = useState(false);
   const chatRef = useRef<HTMLDivElement>(null);
-  const whatsappNumber = '+12345678901'; // Replace with your actual WhatsApp number
+  const whatsappNumber = '+971505374230'; // Replace with your actual WhatsApp number
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
