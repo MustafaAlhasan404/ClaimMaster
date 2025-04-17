@@ -31,8 +31,15 @@ const MagnifyingText = ({
 
   return (
     <div 
-      className={`inline-flex overflow-hidden ${className}`}
-      style={{ fontSize, letterSpacing }}
+      className={`inline-flex overflow-visible ${className}`}
+      style={{ 
+        fontSize, 
+        letterSpacing,
+        lineHeight: '1.3',
+        padding: '0.1em 0',
+        minHeight: '1.5em',
+        position: 'relative'
+      }}
     >
       {letters.map((letter, index) => {
         // Calculate distance from hovered index
@@ -56,6 +63,8 @@ const MagnifyingText = ({
                 ? `rgba(${parseInt(hoverColor.slice(1, 3), 16)}, ${parseInt(hoverColor.slice(3, 5), 16)}, ${parseInt(hoverColor.slice(5, 7), 16)}, ${effectIntensity})` 
                 : textColor,
               fontWeight: hasEffect ? 700 : 400,
+              height: 'auto',
+              overflow: 'visible'
             }}
             animate={{
               scale: hasEffect ? 1 + ((magnifyScale - 1) * effectIntensity) : 1,

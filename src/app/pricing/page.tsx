@@ -20,7 +20,7 @@ export default function Pricing() {
           <div className="max-w-3xl mx-auto text-center">
             <MagnifyingText 
               text="Pricing & Plans"
-              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900"
+              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900 leading-relaxed py-2"
               fontSize="3rem"
               magnifyScale={1.4}
               hoverColor="#3B82F6"

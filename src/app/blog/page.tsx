@@ -94,7 +94,7 @@ export default function Blog() {
           <div className="max-w-3xl mx-auto text-center">
             <MagnifyingText 
               text="Dental Billing Insights"
-              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900"
+              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900 leading-relaxed py-2"
               fontSize="3rem"
               magnifyScale={1.3}
               hoverColor="#3B82F6"
