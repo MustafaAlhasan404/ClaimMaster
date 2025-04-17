@@ -1,5 +1,10 @@
 import React from 'react';
 import ContactForm from '../../components/ContactForm';
+import WavyText from '../../components/WavyText';
+import ScrollRevealText from '../../components/ScrollRevealText';
+import RotatingText from '../../components/RotatingText';
+import MagnifyingText from '../../components/MagnifyingText';
+import AnimatedCard from '../../components/AnimatedCard';
 
 export const metadata = {
   title: 'Contact Us - ClaimMasters Dental Billing',
@@ -13,11 +18,21 @@ export default function Contact() {
       <section className="bg-blue-50 py-16 md:py-24">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">Contact Us</h1>
-            <p className="text-lg mb-8">
-              Have questions about our services? Ready to streamline your dental billing?
-              <br />Get in touch with our team today.
-            </p>
+            <WavyText 
+              text="Contact Us"
+              className="text-4xl md:text-5xl font-bold mb-6"
+              textColor="#1E40AF"
+              fontSize="3rem"
+              waveHeight={25}
+              duration={1.2}
+            />
+            <ScrollRevealText
+              text="Have questions about our services? Ready to streamline your dental billing? Get in touch with our team today."
+              className="text-lg mb-8"
+              fromDirection="bottom"
+              threshold={0.2}
+              staggerDelay={0.02}
+            />
           </div>
         </div>
       </section>
@@ -27,8 +42,13 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             
             {/* Contact Information */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+            <AnimatedCard className="p-6 bg-white rounded-lg shadow-md" delay={0.1}>
+              <MagnifyingText 
+                text="Get In Touch"
+                className="text-2xl font-bold mb-6"
+                magnifyScale={1.3}
+                hoverColor="#3B82F6"
+              />
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -55,8 +75,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <a href="mailto:info@zapdentalbilling.com" className="text-blue-600 hover:underline">
-                      info@zapdentalbilling.com
+                    <a href="mailto:Info@yourclaimmasters.com" className="text-blue-600 hover:underline">
+                      Info@yourclaimmasters.com
                     </a>
                   </div>
                 </div>
@@ -70,7 +90,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Phone</h3>
                     <a href="tel:+17379002401" className="text-blue-600 hover:underline">
-                      (737) 900-2401
+                      +17079934501
                     </a>
                   </div>
                 </div>
@@ -89,13 +109,13 @@ export default function Contact() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </AnimatedCard>
             
             {/* Contact Form */}
-            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+            <AnimatedCard className="bg-gray-50 p-8 rounded-lg shadow-md" delay={0.3}>
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               <ContactForm />
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -103,7 +123,13 @@ export default function Contact() {
       {/* Map Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">Our Location</h2>
+          <ScrollRevealText
+            text="Our Location"
+            className="text-2xl font-bold mb-8 text-center"
+            fromDirection="bottom"
+            showUnderline={true}
+            underlineColor="#3B82F6"
+          />
           <div className="aspect-[16/9] max-w-4xl mx-auto bg-gray-200 rounded-lg">
             {/* Replace with actual map integration */}
             <div className="w-full h-full flex items-center justify-center text-gray-500">
@@ -116,36 +142,47 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+          <RotatingText
+            texts={[
+              "Frequently Asked Questions",
+              "Common Questions",
+              "How Can We Help?",
+              "Got Questions?"
+            ]}
+            className="text-3xl font-bold mb-12 text-center"
+            duration={0.8}
+            autoRotateInterval={4000}
+            fontSize="2.25rem"
+          />
           
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.1}>
               <h3 className="text-xl font-semibold mb-2">How quickly can you start working with our practice?</h3>
               <p className="text-gray-700">
                 We can typically begin working with new clients within 1-2 weeks of signing up. Our onboarding process is designed to be efficient while ensuring we understand your specific needs and systems.
               </p>
-            </div>
+            </AnimatedCard>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.2}>
               <h3 className="text-xl font-semibold mb-2">Do you work with all dental practice management software?</h3>
               <p className="text-gray-700">
                 Yes, we have experience with all major dental practice management software including Dentrix, Eaglesoft, Open Dental, Curve Dental, and more. Our team is trained to adapt to your existing systems.
               </p>
-            </div>
+            </AnimatedCard>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.3}>
               <h3 className="text-xl font-semibold mb-2">What makes ClaimMasters Dental Billing different from other billing services?</h3>
               <p className="text-gray-700">
                 Our focus is exclusively on dental practices, giving us specialized expertise in dental billing nuances. We also offer customized solutions rather than one-size-fits-all packages, and our team provides personalized attention to each client.
               </p>
-            </div>
+            </AnimatedCard>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.4}>
               <h3 className="text-xl font-semibold mb-2">How will we communicate with your team?</h3>
               <p className="text-gray-700">
                 We provide multiple communication channels including a dedicated account manager, regular check-in calls, email support, and secure messaging. We adapt to your preferred communication style.
               </p>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>

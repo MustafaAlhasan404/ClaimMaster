@@ -1,4 +1,8 @@
 import React from 'react';
+import AnimatedHeading from '../../components/AnimatedHeading';
+import TypewriterText from '../../components/TypewriterText';
+import StaggeredText from '../../components/StaggeredText';
+import GradientText from '../../components/GradientText';
 
 export const metadata = {
   title: 'About Us - ClaimMasters Dental Billing',
@@ -12,7 +16,12 @@ export default function About() {
       <section className="bg-blue-50 py-16 md:py-24">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">About ClaimMasters Dental Billing</h1>
+            <AnimatedHeading 
+              text="About ClaimMasters Dental Billing"
+              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900"
+              type="reveal"
+              delay={0.3}
+            />
             <p className="text-lg mb-8">
               Your trusted partner in dental practice financial management since 2010.
             </p>
@@ -24,7 +33,12 @@ export default function About() {
       <section className="py-16">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Our Mission</h2>
+            <GradientText
+              text="Our Mission"
+              className="text-3xl font-bold mb-6 text-center"
+              gradient="linear-gradient(to right, #3B82F6, #1D4ED8)"
+              delay={0.5}
+            />
             <p className="text-lg mb-8 text-gray-700">
               At ClaimMasters Dental Billing, our mission is to empower dental practices to focus on what they do best—delivering exceptional patient care—while we handle the complexity of dental billing, insurance verification, and accounts receivable management.
             </p>
@@ -38,7 +52,12 @@ export default function About() {
       {/* Why Choose Us */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Why Choose ClaimMasters Dental Billing?</h2>
+          <StaggeredText
+            text="Why Choose ClaimMasters Dental Billing?"
+            className="text-3xl font-bold mb-12 text-center"
+            highlightWords={["ClaimMasters"]}
+            highlightColor="#2563EB"
+          />
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md">
@@ -103,7 +122,12 @@ export default function About() {
       {/* Our Team */}
       <section className="py-16">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Leadership Team</h2>
+          <TypewriterText
+            text="Our Leadership Team"
+            className="text-3xl font-bold mb-12 text-center"
+            speed={0.04}
+            delay={0.3}
+          />
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Team member 1 - replace with actual team data */}
@@ -142,7 +166,12 @@ export default function About() {
       {/* Call to Action */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Dental Practice&apos;s Billing?</h2>
+          <AnimatedHeading 
+            text="Ready to Transform Your Dental Practice's Billing?"
+            className="text-3xl font-bold mb-6"
+            type="words"
+            delay={0.3}
+          />
           <p className="text-lg mb-8">
             Schedule a free consultation to learn how ClaimMasters Dental Billing can help your practice increase collections and reduce administrative burden.
           </p>

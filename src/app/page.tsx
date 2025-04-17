@@ -3,6 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ContactForm from '../components/ContactForm';
 import TestimonialCarousel from '../components/TestimonialCarousel';
+import AnimatedHeading from '../components/AnimatedHeading';
+import StaggeredText from '../components/StaggeredText';
+import TypewriterText from '../components/TypewriterText';
+import GradientText from '../components/GradientText';
+import AnimatedCard from '../components/AnimatedCard';
 
 export default function Home() {
   return (
@@ -20,9 +25,14 @@ export default function Home() {
                 className="h-24 w-auto"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">
-              Your Trusted Dental Billing Company
-            </h1>
+            <div className="mb-6">
+              <AnimatedHeading 
+                text="Your Trusted Dental Billing Company"
+                className="text-4xl md:text-5xl font-bold text-blue-900"
+                type="chars"
+                delay={0.2}
+              />
+            </div>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-2">
                 <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +71,14 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Customers love us</h2>
+          <div className="mb-12">
+            <TypewriterText 
+              text="Our Customers love us"
+              className="text-3xl md:text-4xl font-bold text-center"
+              speed={0.03}
+              delay={0.3}
+            />
+          </div>
           <TestimonialCarousel />
         </div>
       </section>
@@ -69,16 +86,34 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">How Can We Help You</h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">Our Dental Billing Services</h3>
+          <div className="mb-4">
+            <StaggeredText
+              text="How Can We Help You"
+              className="text-3xl md:text-4xl font-bold text-center"
+              highlightWords={["Help"]}
+              highlightColor="#2563EB"
+            />
+          </div>
+          <div className="mb-12">
+            <GradientText
+              text="Our Dental Billing Services"
+              className="text-2xl md:text-3xl font-bold text-center"
+              gradient="linear-gradient(to right, #2563EB, #4F46E5, #7C3AED)"
+              delay={0.8}
+            />
+          </div>
           <p className="text-center max-w-3xl mx-auto mb-16">
             With industry knowledge for over 10 years, our team knows how to get things done quickly and efficiently. 
             Take your practice to maximum capacity without worrying about a thing!
           </p>
 
+          {/* Service Cards Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              delay={0.1}
+            >
               <div className="h-48 bg-blue-50 relative flex items-center justify-center">
                 <Image 
                   src="/images/Asset 4.png" 
@@ -97,10 +132,13 @@ export default function Home() {
                   Learn more →
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              delay={0.2}
+            >
               <div className="h-48 bg-blue-50 relative flex items-center justify-center">
                 <Image 
                   src="/images/Asset 4.png" 
@@ -119,10 +157,13 @@ export default function Home() {
                   Learn more →
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              delay={0.3}
+            >
               <div className="h-48 bg-blue-50 relative flex items-center justify-center">
                 <Image 
                   src="/images/Asset 4.png" 
@@ -141,10 +182,13 @@ export default function Home() {
                   Learn more →
                 </Link>
               </div>
-            </div>
-
+            </AnimatedCard>
+            
             {/* Service 4 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              delay={0.4}
+            >
               <div className="h-48 bg-blue-50 relative flex items-center justify-center">
                 <Image 
                   src="/images/Asset 4.png" 
@@ -163,10 +207,13 @@ export default function Home() {
                   Learn more →
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 5 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              delay={0.5}
+            >
               <div className="h-48 bg-blue-50 relative flex items-center justify-center">
                 <Image 
                   src="/images/Asset 4.png" 
@@ -185,10 +232,13 @@ export default function Home() {
                   Learn more →
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 6 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard 
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+              delay={0.6}
+            >
               <div className="h-48 bg-blue-50 relative flex items-center justify-center">
                 <Image 
                   src="/images/Asset 4.png" 
@@ -201,13 +251,13 @@ export default function Home() {
               <div className="p-6">
                 <h4 className="text-xl font-semibold mb-4">Inbound and Outbound Calls</h4>
                 <p className="mb-4">
-                  Whether you have 1 call per day or 100+, we will create a customized solution so you can be confident that each call is answered professionally and taken care of.
+                  We handle all incoming and outgoing calls, answering frequently asked questions, and scheduling appointments as needed.
                 </p>
                 <Link href="/services" className="text-blue-600 hover:underline font-medium">
                   Learn more →
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
           </div>
 
           <div className="mt-12 text-center">

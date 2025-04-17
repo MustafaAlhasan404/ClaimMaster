@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import WavyText from '../../components/WavyText';
+import ScrollRevealText from '../../components/ScrollRevealText';
+import RotatingText from '../../components/RotatingText';
+import MagnifyingText from '../../components/MagnifyingText';
+import AnimatedCard from '../../components/AnimatedCard';
 
 export const metadata = {
   title: 'Blog - ClaimMasters Dental Billing',
@@ -87,10 +92,20 @@ export default function Blog() {
       <section className="bg-blue-50 py-16 md:py-24">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">Dental Billing Insights</h1>
-            <p className="text-lg mb-8">
-              Expert advice and industry updates to help your dental practice thrive
-            </p>
+            <MagnifyingText 
+              text="Dental Billing Insights"
+              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900"
+              fontSize="3rem"
+              magnifyScale={1.3}
+              hoverColor="#3B82F6"
+            />
+            <ScrollRevealText
+              text="Expert advice and industry updates to help your dental practice thrive"
+              className="text-lg mb-8"
+              fromDirection="bottom"
+              threshold={0.2}
+              staggerDelay={0.02}
+            />
           </div>
         </div>
       </section>
@@ -103,8 +118,13 @@ export default function Blog() {
             <div className="col-span-12 lg:col-span-8">
               {/* Blog Posts Grid */}
               <div className="grid md:grid-cols-2 gap-8">
-                {blogPosts.map((post) => (
-                  <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg">
+                {blogPosts.map((post, index) => (
+                  <AnimatedCard 
+                    key={post.id} 
+                    className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg"
+                    delay={0.1 * (index + 1)}
+                    hoverEffect={true}
+                  >
                     <div className="h-48 bg-gray-300 relative">
                       {/* Replace with actual image */}
                       <div className="absolute inset-0 flex items-center justify-center text-gray-500 bg-gray-200">
@@ -135,7 +155,7 @@ export default function Blog() {
                         </Link>
                       </div>
                     </div>
-                  </div>
+                  </AnimatedCard>
                 ))}
               </div>
 
@@ -164,8 +184,15 @@ export default function Blog() {
             {/* Sidebar */}
             <div className="col-span-12 lg:col-span-4">
               {/* Search Bar */}
-              <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h3 className="text-lg font-semibold mb-4">Search Articles</h3>
+              <AnimatedCard className="bg-white p-6 rounded-lg shadow-md mb-8" delay={0.1}>
+                <WavyText 
+                  text="Search Articles"
+                  className="text-lg font-semibold mb-4"
+                  textColor="#1E40AF"
+                  fontSize="1.25rem"
+                  waveHeight={10}
+                  duration={1}
+                />
                 <div className="relative">
                   <input 
                     type="text" 
@@ -176,11 +203,18 @@ export default function Blog() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                   </svg>
                 </div>
-              </div>
+              </AnimatedCard>
 
               {/* Categories */}
-              <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h3 className="text-lg font-semibold mb-4">Categories</h3>
+              <AnimatedCard className="bg-white p-6 rounded-lg shadow-md mb-8" delay={0.2}>
+                <RotatingText
+                  texts={["Categories", "Topics", "Subjects"]}
+                  className="text-lg font-semibold mb-4"
+                  duration={0.6}
+                  autoRotateInterval={3000}
+                  fontSize="1.25rem"
+                  showControls={false}
+                />
                 <ul className="space-y-2">
                   {categories.map((category, index) => (
                     <li key={index}>
@@ -193,42 +227,45 @@ export default function Blog() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </AnimatedCard>
 
               {/* Recent Posts */}
-              <div className="bg-white p-6 rounded-lg shadow-md mb-8">
-                <h3 className="text-lg font-semibold mb-4">Recent Posts</h3>
+              <AnimatedCard className="bg-white p-6 rounded-lg shadow-md mb-8" delay={0.3}>
+                <ScrollRevealText
+                  text="Recent Posts"
+                  className="text-lg font-semibold mb-4"
+                  fromDirection="left"
+                  showUnderline={true}
+                  fontSize="1.25rem"
+                />
                 <ul className="space-y-4">
                   {blogPosts.slice(0, 3).map((post) => (
-                    <li key={post.id} className="flex gap-3">
-                      <div className="w-16 h-16 bg-gray-200 flex-shrink-0 rounded-md flex items-center justify-center text-gray-500">
-                        [Img]
-                      </div>
-                      <div>
-                        <h4 className="font-medium text-sm line-clamp-2">
-                          <Link href={post.slug} className="hover:text-blue-600">
-                            {post.title}
-                          </Link>
-                        </h4>
-                        <span className="text-xs text-gray-500">{post.date}</span>
-                      </div>
+                    <li key={post.id} className="border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+                      <Link href={post.slug} className="hover:text-blue-600">
+                        <h4 className="font-medium mb-1">{post.title}</h4>
+                        <div className="flex text-sm text-gray-500">
+                          <span>{post.date}</span>
+                        </div>
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </AnimatedCard>
 
               {/* Newsletter Signup */}
-              <div className="bg-blue-50 p-6 rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold mb-2">Subscribe to Our Newsletter</h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Get the latest dental billing insights directly to your inbox.
+              <AnimatedCard className="bg-blue-50 p-6 rounded-lg shadow-md" delay={0.4}>
+                <h3 className="text-lg font-semibold mb-3">Subscribe to Our Newsletter</h3>
+                <p className="text-gray-600 mb-4">
+                  Get the latest dental billing tips and industry updates delivered to your inbox.
                 </p>
-                <form>
-                  <input 
-                    type="email" 
-                    placeholder="Your email address"
-                    className="w-full px-4 py-2 mb-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  />
+                <form className="space-y-3">
+                  <div>
+                    <input
+                      type="email"
+                      placeholder="Your email address"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
                   <button 
                     type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
@@ -236,18 +273,29 @@ export default function Blog() {
                     Subscribe
                   </button>
                 </form>
-              </div>
+              </AnimatedCard>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Call to Action */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Have Questions About Dental Billing?</h2>
+          <RotatingText
+            texts={[
+              "Have Questions About Dental Billing?",
+              "Need Expert Dental Billing Advice?",
+              "Want to Optimize Your Practice Revenue?"
+            ]}
+            className="text-3xl font-bold mb-6"
+            duration={0.8}
+            autoRotateInterval={4000}
+            fontSize="2.25rem"
+          />
           <p className="text-lg mb-8">
-            Our team of experts is ready to help your practice navigate the complexities of dental billing and insurance.
+            Our team of dental billing experts is ready to help your practice succeed. 
+            Schedule a free consultation today.
           </p>
           <Link 
             href="/contact" 

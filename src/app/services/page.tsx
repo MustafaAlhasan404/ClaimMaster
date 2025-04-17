@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import ScrollRevealText from '../../components/ScrollRevealText';
+import RotatingText from '../../components/RotatingText';
+import WavyText from '../../components/WavyText';
+import MagnifyingText from '../../components/MagnifyingText';
+import AnimatedCard from '../../components/AnimatedCard';
 
 export const metadata = {
   title: 'Our Services - ClaimMasters Dental Billing',
@@ -13,10 +18,21 @@ export default function Services() {
       <section className="bg-blue-50 py-16 md:py-24">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">Our Services</h1>
-            <p className="text-lg mb-8">
-              Comprehensive dental billing solutions to streamline your practice operations and maximize revenue.
-            </p>
+            <WavyText 
+              text="Our Services"
+              className="text-4xl md:text-5xl font-bold mb-6"
+              textColor="#1E40AF"
+              fontSize="3rem"
+              waveHeight={30}
+              duration={1.2}
+            />
+            <ScrollRevealText
+              text="Comprehensive dental billing solutions to streamline your practice operations and maximize revenue."
+              className="text-lg mb-8"
+              fromDirection="bottom"
+              threshold={0.2}
+              staggerDelay={0.02}
+            />
           </div>
         </div>
       </section>
@@ -24,10 +40,18 @@ export default function Services() {
       {/* Services Section */}
       <section className="py-16">
         <div className="container mx-auto">
+          <div className="mb-12 text-center">
+            <MagnifyingText 
+              text="How We Can Help Your Practice"
+              className="text-3xl font-bold mb-6"
+              magnifyScale={1.8}
+              hoverColor="#3B82F6"
+            />
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
             
             {/* Service 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard className="bg-white rounded-lg shadow-md overflow-hidden" delay={0.1}>
               <div className="h-48 bg-gray-300 relative">
                 {/* Replace with actual image */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -46,10 +70,10 @@ export default function Services() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard className="bg-white rounded-lg shadow-md overflow-hidden" delay={0.2}>
               <div className="h-48 bg-gray-300 relative">
                 {/* Replace with actual image */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -68,10 +92,10 @@ export default function Services() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard className="bg-white rounded-lg shadow-md overflow-hidden" delay={0.3}>
               <div className="h-48 bg-gray-300 relative">
                 {/* Replace with actual image */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -90,10 +114,10 @@ export default function Services() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 4 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard className="bg-white rounded-lg shadow-md overflow-hidden" delay={0.4}>
               <div className="h-48 bg-gray-300 relative">
                 {/* Replace with actual image */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -112,10 +136,10 @@ export default function Services() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 5 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard className="bg-white rounded-lg shadow-md overflow-hidden" delay={0.5}>
               <div className="h-48 bg-gray-300 relative">
                 {/* Replace with actual image */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -134,10 +158,10 @@ export default function Services() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
 
             {/* Service 6 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <AnimatedCard className="bg-white rounded-lg shadow-md overflow-hidden" delay={0.6}>
               <div className="h-48 bg-gray-300 relative">
                 {/* Replace with actual image */}
                 <div className="absolute inset-0 flex items-center justify-center text-gray-500">
@@ -156,7 +180,7 @@ export default function Services() {
                   </svg>
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -164,7 +188,18 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Optimize Your Dental Practice?</h2>
+          <RotatingText
+            texts={[
+              "Ready to Optimize Your Dental Practice?",
+              "Maximize Your Practice Revenue",
+              "Streamline Your Billing Process",
+              "Reduce Administrative Burden"
+            ]}
+            className="text-3xl font-bold mb-6"
+            duration={0.8}
+            autoRotateInterval={4000}
+            fontSize="2.25rem"
+          />
           <p className="text-lg mb-8">
             Contact us today to discuss how our specialized dental billing services can help your practice grow and thrive.
           </p>

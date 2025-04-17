@@ -1,5 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import RotatingText from '../../components/RotatingText';
+import ScrollRevealText from '../../components/ScrollRevealText';
+import MagnifyingText from '../../components/MagnifyingText';
+import WavyText from '../../components/WavyText';
+import AnimatedCard from '../../components/AnimatedCard';
 
 export const metadata = {
   title: 'Pricing & Plans - ClaimMasters Dental Billing',
@@ -13,10 +18,20 @@ export default function Pricing() {
       <section className="bg-blue-50 py-16 md:py-24">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">Pricing & Plans</h1>
-            <p className="text-lg mb-8">
-              Customized and affordable solutions designed to fit your practice&apos;s unique needs
-            </p>
+            <MagnifyingText 
+              text="Pricing & Plans"
+              className="text-4xl md:text-5xl font-bold mb-6 text-blue-900"
+              fontSize="3rem"
+              magnifyScale={1.4}
+              hoverColor="#3B82F6"
+            />
+            <ScrollRevealText
+              text="Customized and affordable solutions designed to fit your practice's unique needs"
+              className="text-lg mb-8"
+              fromDirection="bottom"
+              threshold={0.2}
+              staggerDelay={0.02}
+            />
           </div>
         </div>
       </section>
@@ -25,7 +40,9 @@ export default function Pricing() {
       <section className="py-16">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto mb-12 text-center">
-            <h2 className="text-3xl font-bold mb-6">Transparent & Flexible Pricing</h2>
+            <h2 className="text-3xl font-bold mb-6 text-blue-700">
+              Transparent & Flexible Pricing
+            </h2>
             <p className="text-lg text-gray-600">
               We understand that every dental practice has unique needs and challenges.
               That&apos;s why we offer tailored packages that scale with your practice size and requirements.
@@ -34,7 +51,11 @@ export default function Pricing() {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Starter Plan */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+            <AnimatedCard 
+              className="border border-gray-200 rounded-lg overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1"
+              delay={0.1}
+              hoverEffect={true}
+            >
               <div className="bg-gray-50 p-6 text-center border-b">
                 <h3 className="text-2xl font-bold mb-2">Starter</h3>
                 <p className="text-gray-600 mb-4">For small practices</p>
@@ -83,10 +104,14 @@ export default function Pricing() {
                   Get Started
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
             
             {/* Professional Plan - Highlighted */}
-            <div className="border-2 border-blue-500 rounded-lg overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 relative">
+            <AnimatedCard 
+              className="border-2 border-blue-500 rounded-lg overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1 relative"
+              delay={0.2}
+              hoverEffect={true}
+            >
               <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 text-sm font-semibold">
                 POPULAR
               </div>
@@ -138,10 +163,14 @@ export default function Pricing() {
                   Get Started
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
             
             {/* Enterprise Plan */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1">
+            <AnimatedCard 
+              className="border border-gray-200 rounded-lg overflow-hidden transform transition duration-300 hover:shadow-lg hover:-translate-y-1"
+              delay={0.3}
+              hoverEffect={true}
+            >
               <div className="bg-gray-50 p-6 text-center border-b">
                 <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
                 <p className="text-gray-600 mb-4">For multi-provider practices</p>
@@ -190,7 +219,7 @@ export default function Pricing() {
                   Contact Us
                 </Link>
               </div>
-            </div>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -199,19 +228,59 @@ export default function Pricing() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-600 mb-6">
-                We understand that some practices have unique requirements that may not fit into our standard packages.
-                Our team is happy to work with you to create a tailored solution that meets your specific needs and budget constraints.
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-blue-800">Specialized Billing Services</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We understand that every dental practice is unique. Let's talk about your specific requirements and build a custom solution for you.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-3 px-6 rounded-md transition-colors">
-                  Request Custom Quote
-                </Link>
-                <Link href="/contact" className="bg-gray-100 hover:bg-gray-200 text-gray-800 text-center font-medium py-3 px-6 rounded-md transition-colors">
-                  Schedule a Consultation
-                </Link>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="p-8 border-r border-gray-100">
+                  <h3 className="text-2xl font-bold mb-6 text-blue-700">Flexible Solutions That Scale With Your Practice</h3>
+                  <p className="mb-6 text-gray-600">
+                    Whether you're a solo practitioner or a multi-location DSO, we can customize our services to meet your unique needs:
+                  </p>
+                  <ul className="space-y-4 mb-6">
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span className="text-gray-700">Volume-based pricing for practices of any size</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span className="text-gray-700">Mix-and-match service components based on your needs</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span className="text-gray-700">Performance-based arrangements for practices focused on growth</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      <span className="text-gray-700">Specialized focus on your practice's specific pain points</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold mb-4 text-blue-700">Schedule a Custom Consultation</h3>
+                  <p className="mb-6 text-gray-600">
+                    Speak with our team to discuss your specific practice needs and get a tailored quote that works for your budget.
+                  </p>
+                  <Link 
+                    href="/contact" 
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors text-center shadow-sm hover:shadow"
+                  >
+                    Get a Free Custom Quote
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
