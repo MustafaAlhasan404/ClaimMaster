@@ -13,73 +13,69 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-blue-50 py-16 md:py-24">
-        <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <div className="flex justify-center md:justify-start mb-6">
-              <Image 
-                src="/images/Asset 4.png" 
-                alt="ClaimMasters Dental Billing Logo" 
-                width={250} 
-                height={250} 
-                className="h-24 w-auto"
-              />
+      <section 
+        className="py-16 md:py-24 bg-cover bg-center relative flex justify-center"
+        style={{ backgroundImage: "url('/Job_Image1_74313.jpeg')" }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-0">
+          {/* Flexbox layout - easier to control than grid */}
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            {/* Left content - ADJUST width percentage to control size */}
+            <div className="md:w-[40%]">
+              <div className="flex justify-center md:justify-start mb-6">
+                <Image 
+                  src="/images/Asset 1 2.png" 
+                  alt="ClaimMasters Dental Billing Logo" 
+                  width={250} 
+                  height={250} 
+                  className="h-24 w-auto"
+                />
+              </div>
+              <div className="mb-6">
+                <AnimatedHeading 
+                  text="Where Trust Meets Billing Expertise"
+                  className="text-4xl md:text-5xl font-bold text-white"
+                  type="chars"
+                  delay={0.2}
+                />
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-2">
+                  <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-lg text-white">More approvals, Faster payments and Happier Practice</span>
+                </li>
+                {/* <li className="flex items-start gap-2">
+                  <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-lg">Faster payments.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-lg">Happier Practice</span>
+                </li> */}
+              </ul>
+              <div>
+                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
+                  Talk to Our Experts
+                </Link>
+              </div>
             </div>
-            <div className="mb-6">
-              <AnimatedHeading 
-                text="Your Trusted Dental Billing Company"
-                className="text-4xl md:text-5xl font-bold text-blue-900"
-                type="chars"
-                delay={0.2}
-              />
-            </div>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-2">
-                <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span className="text-lg">Increase your Collections with Our Dental Billing Services</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span className="text-lg">Customized & Affordable Plans to Suit Your Budget</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span className="text-lg">Get Live Support From our Experts</span>
-              </li>
-            </ul>
-            <div>
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
-                Talk to Our Experts
-              </Link>
+            {/* Right content - ADJUST width percentage to control size */}
+            {/* To increase/decrease space between columns, adjust the width percentages above */}
+            <div className="hidden md:block md:w-[40%]">
+              <div className="bg-white p-2 rounded-lg shadow-lg text-sm">
+                <h3 className="text-lg font-semibold mb-2 text-center">Schedule a Consultation</h3>
+                <ContactForm />
+              </div>
             </div>
           </div>
-          <div className="hidden md:block">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-center">Schedule a Consultation</h3>
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto">
-          <div className="mb-12">
-            <TypewriterText 
-              text="Our Customers love us"
-              className="text-3xl md:text-4xl font-bold text-center"
-              speed={0.03}
-              delay={0.3}
-            />
-          </div>
-          <TestimonialCarousel />
         </div>
       </section>
 
@@ -107,157 +103,81 @@ export default function Home() {
             Take your practice to maximum capacity without worrying about a thing!
           </p>
 
-          {/* Service Cards Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* New Service Cards Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service 1 */}
-            <AnimatedCard 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-              delay={0.1}
-            >
-              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
-                <Image 
-                  src="/images/Asset 4.png" 
-                  alt="Insurance Verification" 
-                  width={120} 
-                  height={120} 
-                  className="h-24 w-auto"
-                />
+            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 h-full">
+              <div className="flex justify-center mb-4">
+                <div className="bg-green-500 rounded-full p-4 w-20 h-20 flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                  </svg>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-4">Dental Insurance Eligibility Verification</h4>
-                <p className="mb-4">
-                  Prior verification allows you to be proactive, save time, and have confidence while delivering patient treatment plans.
-                </p>
-                <Link href="/services/insurance-verification" className="text-blue-600 hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </AnimatedCard>
+              <h4 className="text-xl font-semibold mb-3 text-center">Dental Billing Services</h4>
+              <p className="text-gray-600 mb-4">
+                Maximize your revenue with our expert billing team handling all claims, appeals, and follow-ups for optimal reimbursements.
+              </p>
+            </div>
 
             {/* Service 2 */}
-            <AnimatedCard 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-              delay={0.2}
-            >
-              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
-                <Image 
-                  src="/images/Asset 4.png" 
-                  alt="Insurance Billing" 
-                  width={120} 
-                  height={120} 
-                  className="h-24 w-auto"
-                />
+            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 h-full">
+              <div className="flex justify-center mb-4">
+                <div className="bg-green-500 rounded-full p-4 w-20 h-20 flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0"></path>
+                  </svg>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-4">Dental Insurance Billing and AR/Collection</h4>
-                <p className="mb-4">
-                  ClaimMasters team is here to make it quick and convenient for you to track and collect any outstanding claims and payments from insurance companies. Get paid what you are owed.
-                </p>
-                <Link href="/services/insurance-billing" className="text-blue-600 hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </AnimatedCard>
+              <h4 className="text-xl font-semibold mb-3 text-center">Dental Insurance Verification</h4>
+              <p className="text-gray-600 mb-4">
+                Verify patient benefits before appointments to reduce claim denials and improve your practice's financial predictability.
+              </p>
+            </div>
 
             {/* Service 3 */}
-            <AnimatedCard 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-              delay={0.3}
-            >
-              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
-                <Image 
-                  src="/images/Asset 4.png" 
-                  alt="Patient Follow-ups" 
-                  width={120} 
-                  height={120} 
-                  className="h-24 w-auto"
-                />
+            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 h-full">
+              <div className="flex justify-center mb-4">
+                <div className="bg-green-500 rounded-full p-4 w-20 h-20 flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-4">Patient Follow-ups/Fill the Chair</h4>
-                <p className="mb-4">
-                  Are you struggling to juggle all of your responsibilities? Let us take care of that for you. We will handle everything from appointments and follow-ups with active and inactive patients, so don't worry about a thing!
-                </p>
-                <Link href="/services" className="text-blue-600 hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </AnimatedCard>
-            
+              <h4 className="text-xl font-semibold mb-3 text-center">Dental Credentialing Service</h4>
+              <p className="text-gray-600 mb-4">
+                Streamline your provider enrollment process with our experts handling all paperwork, follow-ups and maintenance.
+              </p>
+            </div>
+
             {/* Service 4 */}
-            <AnimatedCard 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-              delay={0.4}
-            >
-              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
-                <Image 
-                  src="/images/Asset 4.png" 
-                  alt="Appointment Scheduling" 
-                  width={120} 
-                  height={120} 
-                  className="h-24 w-auto"
-                />
+            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-500 h-full">
+              <div className="flex justify-center mb-4">
+                <div className="bg-green-500 rounded-full p-4 w-20 h-20 flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                  </svg>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-4">Appointment Scheduling</h4>
-                <p className="mb-4">
-                  Need a more efficient way to schedule your patient appointments? Our technology schedules and streamlines new appointments in real-time and syncs them with your daily calendar.
-                </p>
-                <Link href="/services" className="text-blue-600 hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </AnimatedCard>
+              <h4 className="text-xl font-semibold mb-3 text-center">Dental AR Follow-Up</h4>
+              <p className="text-gray-600 mb-4">
+                Recover aging accounts receivable with our systematic approach to track, appeal, and collect outstanding payments.
+              </p>
+            </div>
+          </div>
 
-            {/* Service 5 */}
-            <AnimatedCard 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-              delay={0.5}
-            >
-              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
-                <Image 
-                  src="/images/Asset 4.png" 
-                  alt="Appointment Confirmation" 
-                  width={120} 
-                  height={120} 
-                  className="h-24 w-auto"
-                />
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-4">Appointment Confirmation</h4>
-                <p className="mb-4">
-                  Our team makes sure that patient appointments are confirmed and there are no last-minute cancellations. Our system follows up via phone and text before an appointment.
-                </p>
-                <Link href="/services" className="text-blue-600 hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </AnimatedCard>
-
-            {/* Service 6 */}
-            <AnimatedCard 
-              className="bg-white rounded-lg shadow-md overflow-hidden"
-              delay={0.6}
-            >
-              <div className="h-48 bg-blue-50 relative flex items-center justify-center">
-                <Image 
-                  src="/images/Asset 4.png" 
-                  alt="Inbound and Outbound Calls" 
-                  width={120} 
-                  height={120} 
-                  className="h-24 w-auto"
-                />
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-4">Inbound and Outbound Calls</h4>
-                <p className="mb-4">
-                  We handle all incoming and outgoing calls, answering frequently asked questions, and scheduling appointments as needed.
-                </p>
-                <Link href="/services" className="text-blue-600 hover:underline font-medium">
-                  Learn more →
-                </Link>
-              </div>
-            </AnimatedCard>
+          {/* Virtual Assistance Section */}
+          <div className="mt-20 mb-10 relative">
+            <div className="flex justify-end mb-4">
+            </div>
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-bold mb-4 text-gray-800">Streamline Your Practice with Virtual Assistance</h2>
+              <p className="text-lg text-gray-600">
+                Not only does our virtual assistant manage your dental billing and insurance claims, but it also
+                schedules patient appointments, confirms visits, and handles frequently asked questions. By
+                automating these tasks, it helps your practice stay efficient and your patients stay happy.
+              </p>
+            </div>
           </div>
 
           <div className="mt-12 text-center">
@@ -268,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Section
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">What Makes Our Dental Billing Services Unique?</h2>
@@ -286,9 +206,9 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Form Section */}
+      {/* Contact Form Section
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Get a Consultation Now</h2>
@@ -296,7 +216,7 @@ export default function Home() {
             <ContactForm />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
