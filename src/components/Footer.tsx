@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white pt-16 pb-8">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -35,8 +35,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <address className="not-italic">
-              <p className="mb-2">2025 Guadalupe Street, Suite 260</p>
-              <p className="mb-4">Austin, Texas 78705</p>
+              <p className="mb-4">San Diego, CA 92019</p>
               
               <p className="mb-2">
                 <a href="mailto:info@claimmastersdentalbilling.com" className="hover:text-blue-300">
@@ -45,7 +44,7 @@ const Footer = () => {
               </p>
               
               <p>
-                <a href="tel:+17379002401" className="hover:text-blue-300">
+                <a href="tel:+17079934501" className="hover:text-blue-300">
                   +17079934501
                 </a>
               </p>
@@ -82,16 +81,25 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
-        
-        <div className="flex flex-col items-center mb-8">
-          <Image 
-            src="/images/Asset 1 2.png" 
-            alt="ClaimMasters Dental Billing Logo" 
-            width={150} 
-            height={150} 
-            className="h-20 w-auto mb-4"
-          />
+          
+          <div className="flex flex-col justify-start items-center">
+            <div className="w-24 h-24 relative mb-4">
+              <Image 
+                src="/images/Asset 1 2.png" 
+                alt="ClaimMasters Dental Billing Logo" 
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+            <div className="w-32 h-32 relative">
+              <Image 
+                src="/images/HIPPAA.png" 
+                alt="HIPAA Compliant" 
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          </div>
         </div>
         
         <div className="border-t border-gray-700 pt-8 text-center text-sm">
