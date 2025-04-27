@@ -15,20 +15,20 @@ export default function Home() {
       {/* Hero Section */}
       <section className="py-16 md:py-24 relative flex justify-center overflow-hidden">
         {/* Blurred background image - positioned underneath */}
-        <div 
+        <div
           className="absolute inset-0 z-0"
-          style={{ 
+          style={{
             backgroundImage: "url('/images/Job_Image1_74313.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "blur(8px)",
-            transform: "scale(1.1)" 
+            transform: "scale(1.1)"
           }}
         ></div>
-        
+
         {/* Overlay for better contrast */}
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
-        
+
         {/* Content container - not blurred */}
         <div className="container mx-auto max-w-7xl px-4 relative z-10">
           {/* Flexbox layout for outer content - at edges of background */}
@@ -36,16 +36,16 @@ export default function Home() {
             {/* Left content - positioned at far left edge */}
             <div className="md:w-[30%] z-20 text-white">
               <div className="flex justify-center md:justify-start mb-6">
-                <Image 
-                  src="/images/Asset 1 2.png" 
-                  alt="ClaimMasters Dental Billing Logo" 
-                  width={250} 
-                  height={250} 
+                <Image
+                  src="/images/Asset 1 2.png"
+                  alt="ClaimMasters Dental Billing Logo"
+                  width={250}
+                  height={250}
                   className="h-24 w-auto"
                 />
               </div>
               <div className="mb-6">
-                <AnimatedHeading 
+                <AnimatedHeading
                   text="Where Trust Meets Billing Expertise"
                   className="text-4xl md:text-5xl font-bold text-white"
                   type="chars"
@@ -69,7 +69,7 @@ export default function Home() {
 
             {/* Center image */}
             <div className="md:w-[35%] my-8 md:my-0 z-10">
-              <div className="relative rounded-2xl overflow-hidden max-w-md mx-auto shadow-2xl border-4 border-white transition-transform duration-300 hover:scale-105">
+              <div className="relative rounded-lg overflow-hidden max-w-md mx-auto">
                 <Image
                   src="/images/Job_Image1_74313.jpeg"
                   alt="Dental billing services"
@@ -78,8 +78,7 @@ export default function Home() {
                   className="object-cover w-full h-[400px]"
                   priority
                 />
-                {/* Gradient overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-black bg-opacity-30"></div>
               </div>
             </div>
 
@@ -114,91 +113,114 @@ export default function Home() {
             />
           </div>
           <p className="text-center max-w-3xl mx-auto mb-16">
-            With industry knowledge for over 10 years, our team knows how to get things done quickly and efficiently. 
+            With industry knowledge for over 10 years, our team knows how to get things done quickly and efficiently.
             Take your practice to maximum capacity without worrying about a thing!
           </p>
 
           {/* New Service Cards Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Service 1 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-600 h-full">
-              <div className="flex justify-center mb-4">
-                <div className="bg-blue-600 rounded-full p-4 w-20 h-20 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
-                  </svg>
-                </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+              <div className="w-full h-56 overflow-hidden">
+                <Image
+                  src="/images/billing-icon-BIG.png"
+                  alt="Dental Billing Service"
+                  width={1024}
+                  height={750}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-center">Dental Billing Services</h4>
-              <p className="text-gray-600 mb-4">
-                Maximize your revenue with our expert billing team handling all claims, appeals, and follow-ups for optimal reimbursements.
-              </p>
+              <div className="p-6 flex-1">
+                <h4 className="text-xl font-semibold mb-3 text-center">Dental Billing Services</h4>
+                <p className="text-gray-600">
+                  Maximize your revenue with our expert billing team handling all claims, appeals, and follow-ups for optimal reimbursements.
+                </p>
+              </div>
             </div>
 
             {/* Service 2 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-600 h-full">
-              <div className="flex justify-center mb-4">
-                <div className="bg-blue-600 rounded-full p-4 w-20 h-20 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0"></path>
-                  </svg>
-                </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+              <div className="w-full h-56 overflow-hidden">
+                <Image
+                  src="/images/insurance-verification-icon.png"
+                  alt="Dental Insurance Verification"
+                  width={1024}
+                  height={750}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-center">Dental Insurance Verification</h4>
-              <p className="text-gray-600 mb-4">
-                Verify patient benefits before appointments to reduce claim denials and improve your practice's financial predictability.
-              </p>
+              <div className="p-6 flex-1">
+                <h4 className="text-xl font-semibold mb-3 text-center">Dental Insurance Verification</h4>
+                <p className="text-gray-600">
+                  Verify patient benefits before appointments to reduce claim denials and improve your practice's financial predictability.
+                </p>
+              </div>
             </div>
 
             {/* Service 3 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-600 h-full">
-              <div className="flex justify-center mb-4">
-                <div className="bg-blue-600 rounded-full p-4 w-20 h-20 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+              <div className="w-full h-56 overflow-hidden">
+                <Image
+                  src="/images/Claim Masters Billing.zip - 6.png"
+                  alt="Dental Credentialing Service"
+                  width={1024}
+                  height={750}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-center">Dental Credentialing Service</h4>
-              <p className="text-gray-600 mb-4">
-                Streamline your provider enrollment process with our experts handling all paperwork, follow-ups and maintenance.
-              </p>
+              <div className="p-6 flex-1">
+                <h4 className="text-xl font-semibold mb-3 text-center">Dental Credentialing Service</h4>
+                <p className="text-gray-600">
+                  Streamline your provider enrollment process with our experts handling all paperwork, follow-ups and maintenance.
+                </p>
+              </div>
             </div>
 
             {/* Service 4 */}
-            <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-600 h-full">
-              <div className="flex justify-center mb-4">
-                <div className="bg-blue-600 rounded-full p-4 w-20 h-20 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                  </svg>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
+              <div className="w-full h-56 overflow-hidden">
+                <Image
+                  src="/images/Claim Masters Billing.zip - 4.png"
+                  alt="Dental AR Follow-Up"
+                  width={1024}
+                  height={750}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 flex-1">
+                <h4 className="text-xl font-semibold mb-3 text-center">Dental AR Follow-Up</h4>
+                <p className="text-gray-600">
+                  Recover aging accounts receivable with our systematic approach to track, appeal, and collect outstanding payments.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Virtual Assistance Section - Styled Like Cards */}
+          <div className="mt-16">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
+              <div className="w-full overflow-hidden">
+                <Image
+                  src="/images/Claim Masters Billing.zip - 5.png"
+                  alt="Dental Virtual Assistance"
+                  width={1200}
+                  height={600}
+                  className="w-full object-cover"
+                />
+              </div>
+              <div className="p-8">
+                <h2 className="text-2xl font-semibold mb-4 text-center">Streamline Your Practice with Virtual Assistance</h2>
+                <p className="text-gray-600 text-lg mb-6">
+                  Not only does our virtual assistant manage your dental billing and insurance claims, but it also schedules patient appointments, confirms visits, and handles frequently asked questions. By automating these tasks, it helps your practice stay efficient and your patients stay happy.
+                </p>
+                <div className="text-center">
+                  <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
+                    Speak with Our Team
+                  </Link>
                 </div>
               </div>
-              <h4 className="text-xl font-semibold mb-3 text-center">Dental AR Follow-Up</h4>
-              <p className="text-gray-600 mb-4">
-                Recover aging accounts receivable with our systematic approach to track, appeal, and collect outstanding payments.
-              </p>
             </div>
-          </div>
-
-          {/* Virtual Assistance Section */}
-          <div className="mt-20 mb-10 relative">
-            <div className="flex justify-end mb-4">
-            </div>
-            <div className="max-w-4xl">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Streamline Your Practice with Virtual Assistance</h2>
-              <p className="text-lg text-gray-600">
-                Not only does our virtual assistant manage your dental billing and insurance claims, but it also
-                schedules patient appointments, confirms visits, and handles frequently asked questions. By
-                automating these tasks, it helps your practice stay efficient and your patients stay happy.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
-              Speak with Our Team
-            </Link>
           </div>
         </div>
       </section>
