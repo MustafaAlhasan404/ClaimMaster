@@ -13,17 +13,28 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section 
-        className="py-16 md:py-24 bg-cover bg-center relative flex justify-center"
-        style={{ backgroundImage: "url('/Job_Image1_74313.jpeg')" }}
-      >
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-0">
-          {/* Flexbox layout - easier to control than grid */}
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            {/* Left content - ADJUST width percentage to control size */}
-            <div className="md:w-[40%]">
+      <section className="py-16 md:py-24 relative flex justify-center overflow-hidden">
+        {/* Blurred background image - positioned underneath */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{ 
+            backgroundImage: "url('/images/Job_Image1_74313.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "blur(8px)",
+            transform: "scale(1.1)" 
+          }}
+        ></div>
+        
+        {/* Overlay for better contrast */}
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+        
+        {/* Content container - not blurred */}
+        <div className="container mx-auto max-w-7xl px-4 relative z-10">
+          {/* Flexbox layout for outer content - at edges of background */}
+          <div className="relative flex flex-col md:flex-row justify-between items-center">
+            {/* Left content - positioned at far left edge */}
+            <div className="md:w-[30%] z-20 text-white">
               <div className="flex justify-center md:justify-start mb-6">
                 <Image 
                   src="/images/Asset 1 2.png" 
@@ -48,18 +59,6 @@ export default function Home() {
                   </svg>
                   <span className="text-lg text-white">More approvals, Faster payments and Happier Practice</span>
                 </li>
-                {/* <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span className="text-lg">Faster payments.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span className="text-lg">Happier Practice</span>
-                </li> */}
               </ul>
               <div>
                 <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
@@ -67,11 +66,27 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            {/* Right content - ADJUST width percentage to control size */}
-            {/* To increase/decrease space between columns, adjust the width percentages above */}
-            <div className="hidden md:block md:w-[40%]">
-              <div className="bg-white p-2 rounded-lg shadow-lg text-sm">
-                <h3 className="text-lg font-semibold mb-2 text-center">Schedule a Consultation</h3>
+
+            {/* Center image */}
+            <div className="md:w-[35%] my-8 md:my-0 z-10">
+              <div className="relative rounded-2xl overflow-hidden max-w-md mx-auto shadow-2xl border-4 border-white transition-transform duration-300 hover:scale-105">
+                <Image
+                  src="/images/Job_Image1_74313.jpeg"
+                  alt="Dental billing services"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-[400px]"
+                  priority
+                />
+                {/* Gradient overlay for depth */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+
+            {/* Right content - positioned at far right edge */}
+            <div className="md:w-[30%] z-20">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-lg font-semibold mb-4 text-center">Schedule a Consultation</h3>
                 <ContactForm />
               </div>
             </div>
