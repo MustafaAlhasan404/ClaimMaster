@@ -1,0 +1,297 @@
+Delivered-To: mayyadahab@gmail.com
+Received: by 2002:a05:7108:3641:b0:40c:9235:983d with SMTP id e1csp4901082gdd;
+        Sat, 26 Apr 2025 15:58:03 -0700 (PDT)
+X-Received: by 2002:a17:90a:c88b:b0:306:b78a:e22d with SMTP id 98e67ed59e1d1-309f7df5685mr10132278a91.20.1745708283692;
+        Sat, 26 Apr 2025 15:58:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1745708283; cv=none;
+        d=google.com; s=arc-20240605;
+        b=SEF43WFAfihGoLW2eUo9rN5cM+my4e5bl+8Mb4s5ZhUXBWQg1+ivm0GJvU1auZGngg
+         gWutUfdlO7GhpwECvwjllhDUvNWv+WyMgXlamlN1MkzlXMdXyuWaGiYlYV31C/n20Quh
+         VkBU+AFjb2DzjKpE0vCj4aS9a7ItCjcIzMMR/ObKu2cjn7jgsM6uX8HA/zuShiSmGVkO
+         jF3n+TSclpT9iv3je+GpJNc4WJlz35OXSO5GJy9vPnHFHrwdDLGVNu8bXRk17/NImLC6
+         k20/dMnLQ0bH8FgxEIeXCLKNC0HKm/XyH+o83mPqaetmwFPm3uSeNMubgyLDCmpp/s1C
+         Fpaw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=pz1C/qQr2cuCohGnuoVS9mmuuY5qeMeYiUCfdK6fuWY=;
+        fh=ThZCzhEDcOpj92106E/81v19FLM/MgFyFBmzPmQeeUA=;
+        b=TOcsZguxk/BVycxFOS2dLZTxiiXbp8N9kXkZ3pvmhxMKGHfCJ21KXpDf2fvafPUF4U
+         VebaweDp0r5VymUWu8zH3rI8I8GEee+7iM5rYB4QdYXVVipdhaOUZoYq5fJmt96Mepiy
+         t01kue7X6hx1VthnclLih4eZBYurXt1Ywr/MQ+sBLJP6M/phMWS740zHnkkEiMPsbmMJ
+         u3saIKwMlnuTdRqbP1tnC3dRMJVuIcVKDrB0TSOZzs38OZVhV4VHeDlpfDZHzoDVBoHh
+         Mz18bkSlIixevIWZ7XXNrXCc7kxpoSb5IUxqQI5D0hnGf5DT6JihZJCERXipA5EYVrFH
+         4dKQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=e0ImVbJk;
+       spf=pass (google.com: domain of jk617187@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jk617187@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <jk617187@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 98e67ed59e1d1-309ee6de6dcsor4477772a91.0.2025.04.26.15.58.03
+        for <mayyadahab@gmail.com>
+        (Google Transport Security);
+        Sat, 26 Apr 2025 15:58:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jk617187@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=e0ImVbJk;
+       spf=pass (google.com: domain of jk617187@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jk617187@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1745708282; x=1746313082; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=pz1C/qQr2cuCohGnuoVS9mmuuY5qeMeYiUCfdK6fuWY=;
+        b=e0ImVbJk96rIytMWUCt1Q/kV0TXuscDFCYnBs5ZpVevCkeQVjhWtA/GtrNteZGSJHD
+         rfH1mfXo5SrufWgSTndeK0uBX7Ru3Jh4K0Ds1DNn0nWhdhqWQsYpNq6QlRPwEgd+y299
+         m2D7KsYowE64FswkjXNPyB6QJIgrSY9V1BU1lzOv4QQtr72EtdQeYtaZzYYo/UVFZOXG
+         2HLsh3IVeh9HJr/EvPyvam2wP7uStQVtMjhkobx5IBxdADffVdw/2Nq7blu0TWutNhVd
+         pl2gx/byModjXc01a7wxVihB9d/wyBPz6FNhmbeqdVjFaBjdKGB+MdMMmIfEFkxNfx4z
+         MIJA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1745708282; x=1746313082;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=pz1C/qQr2cuCohGnuoVS9mmuuY5qeMeYiUCfdK6fuWY=;
+        b=I3ys/8q49+v8HtXZj82k76MBiSTUp32XWds/VCp8RzqcFG+0V4CZh80+BE87VU62pl
+         LvfYtOOEvkAbsncsiUJpi9jVfSp++fw+D6wKXT7tVJz3f8iMOt8+TZZV+0DKrKh+p5lX
+         KwMP7A1FN2GX0PcckN+Z8ldmvntQYWD4jQnVautKAVOpTnOYfnr2b/e7bZ1x/193MouW
+         oLihUEoRmn7XBJOfJKPSb8Is1yVeRfo7j/HKVFQBOdJMuGoT7nLWGPC3z4HQlquT527z
+         xwZW5498tj1hAcdaens/ZV3bX+GY2k+mYNUB+KMaYxWIPyTPCGI2LeHdOcVwdgU4/ixY
+         rb4g==
+X-Gm-Message-State: AOJu0YwrtZy7p+mV5ki0QFnaQPu2AyfbfV2fcRjgOgEyGQPVVKDFQ+8B
+	GnE8yDoJ2mZB/8oPLtYFWiq1Ye0u9rUO3DYOwDFf6WMdZ3NNlNQdYRx7vo88csDUtG8INh+ftt0
+	IIo+eBXxnC9UQfSeaQshICwZDzCCdI9xG
+X-Gm-Gg: ASbGnctRXzFy5Srprognjo81FqXGDEoQzG1kBxOxQuE4xr95VC21g8DmrQq3OoyEcgR
+	sN62iZzkVEtPaB3ULSd6sfl60g6OYe7rflA2NFxtjkQtseM/22VBSDwbzAHPU4EqZyM+ZSGQ7/b
+	lERagzpTmJrDougjUCpUmxCLNSinuqM5bg+V6SxEFIicCLhLTBQJw=
+X-Google-Smtp-Source: AGHT+IFwidFWHoAPB5j9TJyZpzhxCCH1mn3AqEMQBYfZAqi1FVrhCaKPEFyKLRT0r4EY0XQWigICLMJU+GzhiXCXaD0=
+X-Received: by 2002:a17:90b:2b86:b0:2ef:31a9:95c6 with SMTP id
+ 98e67ed59e1d1-309f7ddcb10mr11468308a91.14.1745708282558; Sat, 26 Apr 2025
+ 15:58:02 -0700 (PDT)
+From: Junaid khan <jk617187@gmail.com>
+Date: Sun, 27 Apr 2025 03:57:51 +0500
+X-Gm-Features: ATxdqUGDPDzN-o-FL_D1fs-n4lPMyImJBx9E0_3_r4_k1Gb0LHQe7aShqgJwHsk
+Message-ID: <CAMB7a2LjkShV0HHpP-w4aqg8AaCA0TyoeXFPVsNunuE02GGBrg@mail.gmail.com>
+Subject: Pricing model
+To: mayyadahab@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000103c3c0633b662ca"
+MIME-Version: 1.0
+
+--000000000000103c3c0633b662ca
+Content-Type: text/plain; charset="UTF-8"
+
+Mate please take a look i have setup pricing according to my knowledge for
+dental billing Ar follow-up
+
+Dental insurance billing
+
+
+   - Small
+   - $1099Monthly
+   - If the office insurance collections are under $40,000 month
+
+
+   - 2.99 %Monthly
+   - If the office insurance collections are between $40,000 and $100,000
+
+
+   - 2.50%Monthly
+   - If the office insurance collections are between $100,000 and $150,000
+
+
+   - 2% Monthly
+   - If the office insurance collections are between $150,000 and $200,000
+   per month
+   -
+      - Multi-Location / DSO
+      - Call for custom solution
+      - For multi-location dental practices, contact us for a
+      tailored solution.
+      In DSOs we can go as low as 1.75% not more than that
+
+--000000000000103c3c0633b662ca
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><d=
+iv dir=3D"auto">Mate please take a look i have setup pricing according to m=
+y knowledge for dental billing Ar follow-up</div><div dir=3D"auto"><br></di=
+v>Dental insurance billing<div dir=3D"auto"><br></div><div dir=3D"auto"><di=
+v><ul style=3D"padding:0px;margin:0px;font-family:&quot;roboto condensed&qu=
+ot;,serif;list-style-type:none;font-size:20px;font-style:normal;font-weight=
+:400;letter-spacing:normal;text-align:left;text-indent:0px;text-transform:n=
+one;white-space:normal;word-spacing:0px;text-decoration:none;color:rgb(51,5=
+1,51)" dir=3D"auto"><li style=3D"padding:0px;margin:0px;list-style:none;hei=
+ght:62px;line-height:62px;text-align:center;border-top-left-radius:10px;bor=
+der-top-right-radius:10px;background:linear-gradient(rgb(66,158,119),rgb(66=
+,158,119)) repeat;font-family:&quot;roboto condensed&quot;,serif"><h3 style=
+=3D"padding:0px;margin:0px;font-family:&quot;roboto condensed&quot;,serif;f=
+ont-weight:400;font-size:24px;line-height:normal;display:inline-block;verti=
+cal-align:middle;border-width:0px!important;border-style:none!important;bor=
+der-color:currentcolor;color:rgb(255,255,255)">Small<span style=3D"backgrou=
+nd:repeat;border:0px;margin:2px 5px 5px;line-height:normal;display:block;fo=
+nt-size:14px;font-family:&quot;roboto condensed&quot;,serif"></span></h3></=
+li><li style=3D"padding:0px;margin:0px;list-style:none;height:120px;line-he=
+ight:120px;text-align:center;background:linear-gradient(rgb(86,178,139),rgb=
+(66,158,119)) repeat;font-family:&quot;roboto condensed&quot;,serif"><h2 st=
+yle=3D"padding:0px;margin:0px;font-family:&quot;roboto condensed&quot;,seri=
+f;font-weight:400;font-size:60px;line-height:normal;display:inline-block;ve=
+rtical-align:middle;border-width:0px!important;border-style:none!important;=
+width:auto!important;border-color:currentcolor;color:rgb(255,255,255)"><spa=
+n style=3D"font-size:28px;margin:0px;vertical-align:top;background:repeat;b=
+order:0px;font-family:&quot;roboto condensed&quot;,serif;color:rgb(255,255,=
+255)"></span><span style=3D"font-size:60px;font-weight:700;background:repea=
+t;border:0px;font-family:&quot;roboto condensed&quot;,serif;color:rgb(255,2=
+55,255)">$1099</span><span style=3D"font-size:16px;vertical-align:baseline;=
+line-height:0;background:repeat;border:0px;font-family:&quot;roboto condens=
+ed&quot;,serif">Monthly</span><span style=3D"background:repeat;border:0px;m=
+argin:0px 10px;line-height:normal;display:block;font-family:&quot;roboto co=
+ndensed&quot;,serif;font-size:25px!important"></span></h2></li><li style=3D=
+"padding:0px 5px 0px 10px;margin:0px;list-style:none;font-family:&quot;droi=
+d sans&quot;,sans-serif;height:52px;line-height:52px;font-size:14px;font-we=
+ight:700;text-align:center;border-bottom-width:1px!important;background-col=
+or:rgb(66,158,119);color:rgb(255,255,255)"><div style=3D"max-width:none;bor=
+der:medium;white-space:normal;display:inline-block;vertical-align:middle;li=
+ne-height:normal;font-family:&quot;droid sans&quot;,sans-serif"><div style=
+=3D"max-width:none;margin-bottom:9px;border:medium;white-space:normal;displ=
+ay:inline-block;font-weight:600;padding-left:4px;line-height:normal;font-fa=
+mily:&quot;droid sans&quot;,sans-serif">If the office insurance collections=
+ are under $40,000 month</div></div></li></ul></div><div><ul style=3D"paddi=
+ng:0px;margin:0px;font-family:&quot;roboto condensed&quot;,serif;list-style=
+-type:none;font-size:20px;font-style:normal;font-weight:400;letter-spacing:=
+normal;text-align:left;text-indent:0px;text-transform:none;white-space:norm=
+al;word-spacing:0px;text-decoration:none;color:rgb(51,51,51)" dir=3D"auto">=
+<li style=3D"padding:0px;margin:0px;list-style:none;height:120px;line-heigh=
+t:120px;text-align:center;background:linear-gradient(rgb(255,255,255),rgb(2=
+49,249,249)) repeat;font-family:&quot;roboto condensed&quot;,serif"><h2 sty=
+le=3D"padding:0px;margin:0px;font-family:&quot;roboto condensed&quot;,serif=
+;font-weight:400;font-size:60px;line-height:normal;display:inline-block;ver=
+tical-align:middle;border-width:0px!important;border-style:none!important;w=
+idth:auto!important;border-color:currentcolor;color:rgb(66,158,119)"><span =
+style=3D"font-size:16px;vertical-align:baseline;line-height:0;background:re=
+peat;border:0px;font-family:&quot;roboto condensed&quot;,serif">2.99 %Month=
+ly</span><span style=3D"background:repeat;border:0px;margin:0px 10px;line-h=
+eight:normal;display:block;font-family:&quot;roboto condensed&quot;,serif;f=
+ont-size:25px!important"></span></h2></li><li style=3D"padding:0px 5px 0px =
+10px;margin:0px;list-style:none;font-family:&quot;droid sans&quot;,sans-ser=
+if;height:52px;line-height:52px;font-size:14px;font-weight:700;text-align:c=
+enter;border-bottom-width:1px!important;background-color:rgb(249,249,249);c=
+olor:rgb(134,134,134)"><div style=3D"max-width:none;border:medium;white-spa=
+ce:normal;display:inline-block;vertical-align:middle;line-height:normal;fon=
+t-family:&quot;droid sans&quot;,sans-serif"><div style=3D"max-width:none;ma=
+rgin-bottom:9px;border:medium;white-space:normal;display:inline-block;font-=
+weight:600;padding-left:4px;line-height:normal;font-family:&quot;droid sans=
+&quot;,sans-serif">If the office insurance collections are between $40,000 =
+and $100,000</div></div></li></ul></div><div><ul style=3D"padding:0px;margi=
+n:0px;font-family:&quot;roboto condensed&quot;,serif;list-style-type:none;f=
+ont-size:20px;font-style:normal;font-weight:400;letter-spacing:normal;text-=
+align:left;text-indent:0px;text-transform:none;white-space:normal;word-spac=
+ing:0px;text-decoration:none;color:rgb(51,51,51)" dir=3D"auto"><li style=3D=
+"padding:0px;margin:0px;list-style:none;height:120px;line-height:120px;text=
+-align:center;background:linear-gradient(rgb(255,255,255),rgb(249,249,249))=
+ repeat;font-family:&quot;roboto condensed&quot;,serif"><h2 style=3D"paddin=
+g:0px;margin:0px;font-family:&quot;roboto condensed&quot;,serif;font-weight=
+:400;font-size:60px;line-height:normal;display:inline-block;vertical-align:=
+middle;border-width:0px!important;border-style:none!important;width:auto!im=
+portant;border-color:currentcolor;color:rgb(66,158,119)"><span style=3D"fon=
+t-size:60px;font-weight:700;background:repeat;border:0px;font-family:&quot;=
+roboto condensed&quot;,serif;color:rgb(66,158,119)">2.50%</span><span style=
+=3D"font-size:16px;vertical-align:baseline;line-height:0;background:repeat;=
+border:0px;font-family:&quot;roboto condensed&quot;,serif">Monthly</span><s=
+pan style=3D"background:repeat;border:0px;margin:0px 10px;line-height:norma=
+l;display:block;font-family:&quot;roboto condensed&quot;,serif;font-size:25=
+px!important"></span></h2></li><li style=3D"padding:0px 5px 0px 10px;margin=
+:0px;list-style:none;font-family:&quot;droid sans&quot;,sans-serif;height:5=
+2px;line-height:52px;font-size:14px;font-weight:700;text-align:center;borde=
+r-bottom-width:1px!important;background-color:rgb(249,249,249);color:rgb(13=
+4,134,134)"><div style=3D"max-width:none;border:medium;white-space:normal;d=
+isplay:inline-block;vertical-align:middle;line-height:normal;font-family:&q=
+uot;droid sans&quot;,sans-serif"><div style=3D"max-width:none;margin-bottom=
+:9px;border:medium;white-space:normal;display:inline-block;font-weight:600;=
+padding-left:4px;line-height:normal;font-family:&quot;droid sans&quot;,sans=
+-serif">If the office insurance collections are between $100,000 and $150,0=
+00</div></div></li></ul></div><div><ul style=3D"padding:0px;margin:0px;font=
+-family:&quot;roboto condensed&quot;,serif;list-style-type:none;font-size:2=
+0px;font-style:normal;font-weight:400;letter-spacing:normal;text-align:left=
+;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;te=
+xt-decoration:none;color:rgb(51,51,51)" dir=3D"auto"><li style=3D"padding:0=
+px;margin:0px;list-style:none;height:120px;line-height:120px;text-align:cen=
+ter;background:linear-gradient(rgb(255,255,255),rgb(249,249,249)) repeat;fo=
+nt-family:&quot;roboto condensed&quot;,serif"><h2 style=3D"padding:0px;marg=
+in:0px;font-family:&quot;roboto condensed&quot;,serif;font-weight:400;font-=
+size:60px;line-height:normal;display:inline-block;vertical-align:middle;bor=
+der-width:0px!important;border-style:none!important;width:auto!important;bo=
+rder-color:currentcolor;color:rgb(66,158,119)"><span style=3D"font-size:16p=
+x;vertical-align:baseline;line-height:0;background:repeat;border:0px;font-f=
+amily:&quot;roboto condensed&quot;,serif">2% Monthly</span><span style=3D"b=
+ackground:repeat;border:0px;margin:0px 10px;line-height:normal;display:bloc=
+k;font-family:&quot;roboto condensed&quot;,serif;font-size:25px!important">=
+</span></h2></li><li style=3D"padding:0px 5px 0px 10px;margin:0px;list-styl=
+e:none;font-family:&quot;droid sans&quot;,sans-serif;height:52px;line-heigh=
+t:52px;font-size:14px;font-weight:700;text-align:center;border-bottom-width=
+:1px!important;background-color:rgb(249,249,249);color:rgb(134,134,134)"><d=
+iv style=3D"max-width:none;border:medium;white-space:normal;display:inline-=
+block;vertical-align:middle;line-height:normal;font-family:&quot;droid sans=
+&quot;,sans-serif"><div style=3D"max-width:none;margin-bottom:9px;border:me=
+dium;white-space:normal;display:inline-block;font-weight:600;padding-left:4=
+px;line-height:normal;font-family:&quot;droid sans&quot;,sans-serif">If the=
+ office insurance collections are between $150,000 and $200,000 per month</=
+div></div></li><li style=3D"padding:0px 5px 0px 10px;margin:0px;list-style:=
+none;font-family:&quot;droid sans&quot;,sans-serif;height:52px;line-height:=
+52px;font-size:14px;font-weight:700;text-align:center;border-bottom-width:1=
+px!important;background-color:rgb(249,249,249);color:rgb(134,134,134)"><div=
+ style=3D"max-width:none;border:medium;white-space:normal;display:inline-bl=
+ock;vertical-align:middle;line-height:normal;font-family:&quot;droid sans&q=
+uot;,sans-serif" dir=3D"auto"><div style=3D"max-width:none;margin-bottom:9p=
+x;border:medium;white-space:normal;display:inline-block;font-weight:600;pad=
+ding-left:4px;line-height:normal;font-family:&quot;droid sans&quot;,sans-se=
+rif" dir=3D"auto"><div style=3D"font-family:&quot;droid sans&quot;,sans-ser=
+if"><ul style=3D"padding:0px;margin:0px;font-family:&quot;roboto condensed&=
+quot;,serif;list-style-type:none;font-size:20px;font-style:normal;font-weig=
+ht:400;letter-spacing:normal;text-align:left;text-indent:0px;text-transform=
+:none;white-space:normal;word-spacing:0px;text-decoration:none;color:rgb(51=
+,51,51)"><li style=3D"padding:0px;margin:0px;list-style:none;height:62px;li=
+ne-height:62px;text-align:center;border-top-left-radius:10px;border-top-rig=
+ht-radius:10px;background:linear-gradient(rgb(249,249,249),rgb(249,249,249)=
+) repeat;font-family:&quot;roboto condensed&quot;,serif"><h3 style=3D"paddi=
+ng:0px;margin:0px;font-family:&quot;roboto condensed&quot;,serif;font-weigh=
+t:400;font-size:24px;line-height:normal;display:inline-block;vertical-align=
+:middle;border-width:0px!important;border-style:none!important;border-color=
+:currentcolor;color:rgb(0,0,0)">Multi-Location / DSO<span style=3D"backgrou=
+nd:repeat;border:0px;margin:2px 5px 5px;line-height:normal;display:block;fo=
+nt-size:14px;font-family:&quot;roboto condensed&quot;,serif"></span></h3></=
+li><li style=3D"padding:0px;margin:0px;list-style:none;height:120px;line-he=
+ight:120px;text-align:center;background:linear-gradient(rgb(255,255,255),rg=
+b(249,249,249)) repeat;font-family:&quot;roboto condensed&quot;,serif"><h2 =
+style=3D"padding:0px;margin:0px;font-family:&quot;roboto condensed&quot;,se=
+rif;font-weight:400;font-size:60px;line-height:normal;display:inline-block;=
+vertical-align:middle;border-width:0px!important;border-style:none!importan=
+t;width:auto!important;border-color:currentcolor;color:rgb(66,158,119)"><sp=
+an style=3D"font-size:28px;margin:0px;vertical-align:top;background:repeat;=
+border:0px;font-family:&quot;roboto condensed&quot;,serif;color:rgb(66,158,=
+119)"></span><span style=3D"font-size:60px;font-weight:700;background:repea=
+t;border:0px;font-family:&quot;roboto condensed&quot;,serif;color:rgb(66,15=
+8,119)"></span><span style=3D"font-size:28px;background:repeat;border:0px;f=
+ont-family:&quot;roboto condensed&quot;,serif;color:rgb(66,158,119)"></span=
+><span style=3D"font-size:16px;vertical-align:baseline;line-height:0;backgr=
+ound:repeat;border:0px;font-family:&quot;roboto condensed&quot;,serif"></sp=
+an><span style=3D"background:repeat;border:0px;margin:0px 10px;line-height:=
+normal;display:block;font-family:&quot;roboto condensed&quot;,serif;font-si=
+ze:25px!important">Call for custom solution</span></h2></li><li style=3D"pa=
+dding:0px 5px 0px 10px;margin:0px;list-style:none;font-family:&quot;droid s=
+ans&quot;,sans-serif;height:52px;line-height:52px;font-size:14px;font-weigh=
+t:700;text-align:center;border-bottom-width:1px!important;background-color:=
+rgb(249,249,249);color:rgb(134,134,134)"><div style=3D"max-width:none;borde=
+r:medium;white-space:normal;display:inline-block;vertical-align:middle;line=
+-height:normal;font-family:&quot;droid sans&quot;,sans-serif"><div style=3D=
+"max-width:none;margin-bottom:9px;border:medium;white-space:normal;display:=
+inline-block;font-weight:600;padding-left:4px;line-height:normal;font-famil=
+y:&quot;droid sans&quot;,sans-serif">For multi-location dental practices, c=
+ontact us for a tailored&nbsp;solution.</div></div></li></ul></div>In DSOs =
+we can go as low as 1.75% not more than that</div></div></li></ul></div></d=
+iv>
+
+--000000000000103c3c0633b662ca--

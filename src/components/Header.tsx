@@ -26,7 +26,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center py-4">
         <Link href="/" className="flex items-center gap-3">
           <Image 
-            src="/images/Asset 4.png" 
+            src="/images/Asset 4.webp" 
             alt="ClaimMasters Dental Billing Logo" 
             width={200} 
             height={200} 

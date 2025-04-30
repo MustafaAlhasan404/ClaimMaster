@@ -18,7 +18,7 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/images/Job_Image1_74313.jpeg')",
+            backgroundImage: "url('/images/Job_Image1_74313.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             filter: "blur(8px)",
@@ -37,7 +37,7 @@ export default function Home() {
             <div className="md:w-[30%] z-20 text-white">
               <div className="flex justify-center md:justify-start mb-6">
                 <Image
-                  src="/images/Asset 1 2.png"
+                  src="/images/Asset 1 2.webp"
                   alt="ClaimMasters Dental Billing Logo"
                   width={250}
                   height={250}
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="md:w-[35%] my-8 md:my-0 z-10">
               <div className="relative rounded-lg overflow-hidden max-w-md mx-auto">
                 <Image
-                  src="/images/Job_Image1_74313.jpeg"
+                  src="/images/Job_Image1_74313.webp"
                   alt="Dental billing services"
                   width={600}
                   height={400}
@@ -109,13 +109,13 @@ export default function Home() {
             Take your practice to maximum capacity without worrying about a thing!
           </p>
 
-          {/* New Service Cards Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Services Grid - 4 in top row, 1 centered below */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
             {/* Service 1 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/billing-icon-BIG.png"
+                  src="/images/billing-icon-BIG.webp"
                   alt="Dental Billing Service"
                   width={1024}
                   height={750}
@@ -138,7 +138,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/insurance-verification-icon.png"
+                  src="/images/insurance-verification-icon.webp"
                   alt="Dental Insurance Verification"
                   width={1024}
                   height={750}
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/Claim Masters Billing.zip - 6.png"
+                  src="/images/Claim Masters Billing.zip - 6.webp"
                   alt="Dental Credentialing Service"
                   width={1024}
                   height={750}
@@ -184,7 +184,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/Claim Masters Billing.zip - 4.png"
+                  src="/images/Claim Masters Billing.zip - 4.webp"
                   alt="Dental AR Follow-Up"
                   width={1024}
                   height={750}
@@ -204,27 +204,37 @@ export default function Home() {
             </div>
           </div>
             
-          {/* Service 5 - Virtual Assistant - Wider card as it's alone in its row */}
+          {/* Service 5 - Centered under the top row */}
           <div className="mt-6">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col md:flex-row lg:w-1/2 mx-auto">
-              <div className="w-full md:w-1/2 h-56 md:h-auto overflow-hidden">
-                <Image
-                  src="/images/Claim Masters Billing.zip - 5.png"
-                  alt="Dental Virtual Assistance"
-                  width={1024}
-                  height={750}
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div className="p-6 flex-1 md:flex md:flex-col md:justify-center">
-                <h4 className="text-xl font-semibold mb-3 text-center md:text-left">
-                  <span className="text-blue-500 text-2xl">
-                    Dental Virtual Assistant
-                  </span>
-                </h4>
-                <p className="text-gray-600">
-                  Let our virtual assistants handle scheduling, confirmations, and administrative tasks to increase efficiency and patient satisfaction.
-                </p>
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full w-full mx-auto">
+              <div className="flex flex-col md:flex-row">
+                <div className="md:w-1/3 h-64 md:h-auto overflow-hidden">
+                  <Image
+                    src="/images/Claim Masters Billing.zip - 5.webp"
+                    alt="Dental Virtual Assistance"
+                    width={1024}
+                    height={750}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+                <div className="p-8 md:w-2/3 flex flex-col justify-center">
+                  <h4 className="text-xl font-semibold mb-4 text-center md:text-left">
+                    <span className="text-blue-500 text-2xl">
+                      Dental Virtual Assistant
+                    </span>
+                  </h4>
+                  <p className="text-gray-600 text-lg">
+                    Let our virtual assistants handle scheduling, confirmations, and administrative tasks to increase efficiency and patient satisfaction.
+                  </p>
+                  <div className="mt-4 flex justify-center md:justify-start">
+                    <Link href="/services#virtual-assistant" className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                      Learn more
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

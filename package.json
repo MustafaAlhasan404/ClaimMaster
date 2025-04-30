@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "convert-to-webp": "node scripts/convert-to-webp.js",
+    "optimize-webp": "node scripts/optimize-webp.js",
+    "replace-with-optimized": "node scripts/replace-with-optimized.js",
+    "images:optimize": "npm run convert-to-webp && npm run optimize-webp && npm run replace-with-optimized"
   },
   "dependencies": {
     "@wix/data": "^1.0.222",
@@ -16,7 +20,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
-    "react-intersection-observer": "^9.16.0"
+    "react-intersection-observer": "^9.16.0",
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

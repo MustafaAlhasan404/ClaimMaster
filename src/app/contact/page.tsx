@@ -20,7 +20,7 @@ export default function Contact() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/images/ContactUs.jpeg')",
+            backgroundImage: "url('/images/ContactUs.webp')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'blur(0px)',

@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { m, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect, useState, useRef } from 'react';
 
 type ScrollRevealTextProps = {
   text: string;
@@ -27,68 +25,77 @@ const ScrollRevealText = ({
   showUnderline = false,
   underlineColor = '#3B82F6'
 }: ScrollRevealTextProps) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold, triggerOnce: true });
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const words = text.split(' ');
 
-  // Set initial and animate positions based on direction
-  const getInitialPosition = () => {
-    switch (fromDirection) {
-      case 'left': return { x: -100, opacity: 0 };
-      case 'right': return { x: 100, opacity: 0 };
-      case 'top': return { y: -50, opacity: 0 };
-      case 'bottom': return { y: 50, opacity: 0 };
-      default: return { y: 50, opacity: 0 };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [threshold]);
+
+  // Set initial CSS values based on direction
+  const getInitialStyles = (direction: string) => {
+    switch (direction) {
+      case 'left': return { transform: 'translateX(-30px)' };
+      case 'right': return { transform: 'translateX(30px)' };
+      case 'top': return { transform: 'translateY(-30px)' };
+      case 'bottom': return { transform: 'translateY(30px)' };
+      default: return { transform: 'translateY(30px)' };
     }
   };
 
-  useEffect(() => {
-    if (inView) {
-      controls.start(i => ({
-        x: 0,
-        y: 0,
-        opacity: 1,
-        transition: {
-          duration: 0.7,
-          ease: [0.2, 0.65, 0.3, 0.9],
-          delay: i * staggerDelay
-        }
-      }));
-    }
-  }, [controls, inView, staggerDelay]);
+  const initialStyles = getInitialStyles(fromDirection);
 
   return (
-    <m.div
+    <div
       ref={ref}
       className={`flex flex-wrap ${className}`}
       style={{ fontSize, color: textColor }}
     >
       {words.map((word, i) => (
-        <m.span
+        <span
           key={i}
-          custom={i}
-          initial={getInitialPosition()}
-          animate={controls}
           className="inline-block mr-2 relative"
-          style={{ marginBottom: '0.25rem' }}
+          style={{ 
+            marginBottom: '0.25rem',
+            opacity: isVisible ? 1 : 0,
+            ...initialStyles,
+            transform: isVisible ? 'translate(0, 0)' : initialStyles.transform,
+            transition: `transform 0.7s ease, opacity 0.7s ease`,
+            transitionDelay: `${i * staggerDelay}s`,
+          }}
         >
           {word}
           {showUnderline && (
-            <m.span
-              className="absolute bottom-0 left-0 h-[2px] bg-blue-500"
-              initial={{ width: '0%' }}
-              animate={inView ? { width: '100%' } : { width: '0%' }}
-              transition={{
-                duration: 0.5,
-                delay: i * staggerDelay + 0.3,
-                ease: 'easeInOut'
+            <span
+              className="absolute bottom-0 left-0 h-[2px]"
+              style={{ 
+                backgroundColor: underlineColor,
+                width: isVisible ? '100%' : '0%',
+                transition: 'width 0.5s ease',
+                transitionDelay: `${i * staggerDelay + 0.3}s`,
               }}
-              style={{ backgroundColor: underlineColor }}
             />
           )}
-        </m.span>
+        </span>
       ))}
-    </m.div>
+    </div>
   );
 };
 

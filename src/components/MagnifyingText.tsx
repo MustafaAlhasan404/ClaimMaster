@@ -1,18 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
 
 type MagnifyingTextProps = {
   text: string;
   className?: string;
   fontSize?: string;
   magnifyScale?: number;
-  staggerAmount?: number;
-  textColor?: string;
   hoverColor?: string;
-  letterSpacing?: string;
-  fadeAmount?: number;
 };
 
 const MagnifyingText = ({
@@ -20,11 +15,7 @@ const MagnifyingText = ({
   className = '',
   fontSize = '2rem',
   magnifyScale = 1.5,
-  staggerAmount = 0.02,
-  textColor = '#1F2937',
   hoverColor = '#2563EB',
-  letterSpacing = '-0.05em',
-  fadeAmount = 0.3,
 }: MagnifyingTextProps) => {
   const letters = Array.from(text);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -34,7 +25,7 @@ const MagnifyingText = ({
       className={`inline-flex overflow-visible ${className}`}
       style={{ 
         fontSize, 
-        letterSpacing,
+        letterSpacing: '-0.05em',
         lineHeight: '1.3',
         padding: '0.1em 0',
         minHeight: '1.5em',
@@ -53,37 +44,29 @@ const MagnifyingText = ({
         // Determine if this letter should have an effect applied
         const hasEffect = distance !== null && distance <= 4;
         
+        const style: React.CSSProperties = {
+          position: 'relative',
+          display: 'inline-block',
+          color: hasEffect ? hoverColor : 'currentColor',
+          fontWeight: hasEffect ? 700 : 400,
+          height: 'auto',
+          overflow: 'visible',
+          transition: 'all 0.3s ease',
+          transform: hasEffect ? `scale(${1 + ((magnifyScale - 1) * effectIntensity)}) translateY(${-5 * effectIntensity}px)` : 'scale(1) translateY(0)',
+          opacity: distance !== null 
+            ? 0.3 + ((1 - 0.3) * (hasEffect ? effectIntensity : 0.5))
+            : 1,
+        };
+
         return (
-          <m.span
+          <span
             key={index}
-            style={{ 
-              position: 'relative',
-              display: 'inline-block',
-              color: hasEffect 
-                ? `rgba(${parseInt(hoverColor.slice(1, 3), 16)}, ${parseInt(hoverColor.slice(3, 5), 16)}, ${parseInt(hoverColor.slice(5, 7), 16)}, ${effectIntensity})` 
-                : textColor,
-              fontWeight: hasEffect ? 700 : 400,
-              height: 'auto',
-              overflow: 'visible'
-            }}
-            animate={{
-              scale: hasEffect ? 1 + ((magnifyScale - 1) * effectIntensity) : 1,
-              y: hasEffect ? -5 * effectIntensity : 0,
-              opacity: distance !== null 
-                ? fadeAmount + ((1 - fadeAmount) * (hasEffect ? effectIntensity : 0.5))
-                : 1,
-            }}
-            transition={{
-              type: 'spring',
-              stiffness: 500,
-              damping: 30,
-              delay: index * staggerAmount,
-            }}
-            onHoverStart={() => setHoveredIndex(index)}
-            onHoverEnd={() => setHoveredIndex(null)}
+            style={style}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             {letter === ' ' ? '\u00A0' : letter}
-          </m.span>
+          </span>
         );
       })}
     </div>

@@ -75,7 +75,7 @@ const Footer = () => {
           <div className="flex flex-col justify-start items-center">
             <div className="w-24 h-24 relative mb-4">
               <Image 
-                src="/images/Asset 1 2.png" 
+                src="/images/Asset 1 2.webp" 
                 alt="ClaimMasters Dental Billing Logo" 
                 fill
                 style={{ objectFit: 'contain' }}
@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
             <div className="w-32 h-32 relative">
               <Image 
-                src="/images/HIPPAA.png" 
+                src="/images/HIPPAA.webp" 
                 alt="HIPAA Compliant" 
                 fill
                 style={{ objectFit: 'contain' }}
