@@ -63,10 +63,6 @@ const Header = () => {
             Home
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
-          <Link href="/about" className="hover:text-blue-600 font-medium relative group">
-            About
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-          </Link>
           <Link href="/pricing" className="hover:text-blue-600 font-medium relative group">
             Pricing & Plans
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -101,10 +97,6 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <Link href="/blog" className="hover:text-blue-600 font-medium relative group">
-            Blog
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-          </Link>
           <Link href="/contact" className="hover:text-blue-600 font-medium relative group">
             Contact
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -136,15 +128,6 @@ const Header = () => {
                 >
                   <Link href="/" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Home
-                  </Link>
-                </m.div>
-                <m.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2, delay: 0.05 }}
-                >
-                  <Link href="/about" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
-                    About
                   </Link>
                 </m.div>
                 <m.div
@@ -206,15 +189,6 @@ const Header = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.2 }}
-                >
-                  <Link href="/blog" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
-                    Blog
-                  </Link>
-                </m.div>
-                <m.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.2, delay: 0.25 }}
                 >
                   <Link href="/contact" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Contact

@@ -15,13 +15,25 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-blue-50 py-16 md:py-24">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
+      <section className="relative py-16 md:py-24 overflow-hidden">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/images/ContactUs.jpeg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(0px)',
+          }}
+        ></div>
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
             <WavyText 
               text="Contact Us"
               className="text-4xl md:text-5xl font-bold mb-6"
-              textColor="#1E40AF"
+              textColor="#fff"
               fontSize="3rem"
               waveHeight={25}
               duration={1.2}
@@ -60,10 +72,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Address</h3>
-                    <p className="text-gray-600">
-                      2025 Guadalupe Street, Suite 260<br />
-                      Austin, Texas 78705
-                    </p>
+                    <p className="text-gray-600">San Diego, CA 92019</p>
                   </div>
                 </div>
                 
@@ -75,8 +84,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <a href="mailto:Info@yourclaimmasters.com" className="text-blue-600 hover:underline">
-                      Info@yourclaimmasters.com
+                    <a href="mailto:info@claimmastersdentalbilling.com" className="text-blue-600 hover:underline">
+                      info@claimmastersdentalbilling.com
                     </a>
                   </div>
                 </div>
@@ -89,25 +98,24 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                    <a href="tel:+17379002401" className="text-blue-600 hover:underline">
+                    <a href="tel:+17079934501" className="text-blue-600 hover:underline">
                       +17079934501
                     </a>
                   </div>
                 </div>
-              </div>
-              
-              <div className="mt-12">
-                <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex justify-between">
-                    <span>Monday - Friday:</span>
-                    <span>9:00 AM - 5:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday - Sunday:</span>
-                    <span>Closed</span>
-                  </li>
-                </ul>
+                <div className="mt-12">
+                  <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex justify-between">
+                      <span>Monday - Friday:</span>
+                      <span>8:00 AM - 5:00 PM (Pacific Time)</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Saturday - Sunday:</span>
+                      <span>Closed</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </AnimatedCard>
             
@@ -127,62 +135,18 @@ export default function Contact() {
             text="Our Location"
             className="text-2xl font-bold mb-8 text-center"
             fromDirection="bottom"
-            showUnderline={true}
-            underlineColor="#3B82F6"
           />
-          <div className="aspect-[16/9] max-w-4xl mx-auto bg-gray-200 rounded-lg">
-            {/* Replace with actual map integration */}
-            <div className="w-full h-full flex items-center justify-center text-gray-500">
-              [Google Map would be embedded here]
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="container mx-auto max-w-4xl">
-          <RotatingText
-            texts={[
-              "Frequently Asked Questions",
-              "Common Questions",
-              "How Can We Help?",
-              "Got Questions?"
-            ]}
-            className="text-3xl font-bold mb-12 text-center"
-            duration={0.8}
-            autoRotateInterval={4000}
-            fontSize="2.25rem"
-          />
-          
-          <div className="space-y-6">
-            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.1}>
-              <h3 className="text-xl font-semibold mb-2">How quickly can you start working with our practice?</h3>
-              <p className="text-gray-700">
-                We can typically begin working with new clients within 1-2 weeks of signing up. Our onboarding process is designed to be efficient while ensuring we understand your specific needs and systems.
-              </p>
-            </AnimatedCard>
-            
-            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.2}>
-              <h3 className="text-xl font-semibold mb-2">Do you work with all dental practice management software?</h3>
-              <p className="text-gray-700">
-                Yes, we have experience with all major dental practice management software including Dentrix, Eaglesoft, Open Dental, Curve Dental, and more. Our team is trained to adapt to your existing systems.
-              </p>
-            </AnimatedCard>
-            
-            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.3}>
-              <h3 className="text-xl font-semibold mb-2">What makes ClaimMasters Dental Billing different from other billing services?</h3>
-              <p className="text-gray-700">
-                Our focus is exclusively on dental practices, giving us specialized expertise in dental billing nuances. We also offer customized solutions rather than one-size-fits-all packages, and our team provides personalized attention to each client.
-              </p>
-            </AnimatedCard>
-            
-            <AnimatedCard className="bg-white p-6 rounded-lg shadow-md" delay={0.4}>
-              <h3 className="text-xl font-semibold mb-2">How will we communicate with your team?</h3>
-              <p className="text-gray-700">
-                We provide multiple communication channels including a dedicated account manager, regular check-in calls, email support, and secure messaging. We adapt to your preferred communication style.
-              </p>
-            </AnimatedCard>
+          <div className="aspect-[16/9] max-w-4xl mx-auto bg-gray-200 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=San+Diego,+CA+92019&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="San Diego, CA 92019 Map"
+            ></iframe>
           </div>
         </div>
       </section>

@@ -8,23 +8,25 @@ const ContactForm = () => {
     name: '',
     email: '',
     phone: '',
+    service: '',
     message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { name, email, phone, message } = formData;
+    const { name, email, phone, service, message } = formData;
     const subject = encodeURIComponent('New Contact Form Submission - ClaimMasters');
     const body = encodeURIComponent(`
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
+Service: ${service}
 Message: ${message}
     `);
     window.location.href = `mailto:Info@yourclaimmasters.com?subject=${subject}&body=${body}`;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -35,7 +37,7 @@ Message: ${message}
   return (
     <m.form 
       onSubmit={handleSubmit}
-      className="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-lg"
+      className="max-w-2xl mx-auto p-6 "
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -83,6 +85,27 @@ Message: ${message}
             required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
+        </div>
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
+            Service Name
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="">Select a Service</option>
+            <option value="Insurance Billing">Insurance Billing</option>
+            <option value="Insurance Verification">Insurance Verification</option>
+            <option value="Dental Virtual Assistant">Dental Virtual Assistant</option>
+            <option value="Accounting & Bookkeeping">Accounting & Bookkeeping</option>
+            <option value="Appointment Scheduling">Appointment Scheduling</option>
+            <option value="Other">Other</option>
+          </select>
         </div>
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">

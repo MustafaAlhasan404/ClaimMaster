@@ -104,14 +104,6 @@ export default function Home() {
               highlightColor="#2563EB"
             />
           </div>
-          <div className="mb-12">
-            <GradientText
-              text="Our Dental Billing Services"
-              className="text-2xl md:text-3xl font-bold text-center"
-              gradient="linear-gradient(to right, #2563EB, #4F46E5, #7C3AED)"
-              delay={0.8}
-            />
-          </div>
           <p className="text-center max-w-3xl mx-auto mb-16">
             With industry knowledge for over 10 years, our team knows how to get things done quickly and efficiently.
             Take your practice to maximum capacity without worrying about a thing!
@@ -131,7 +123,11 @@ export default function Home() {
                 />
               </div>
               <div className="p-6 flex-1">
-                <h4 className="text-xl font-semibold mb-3 text-center">Dental Billing Services</h4>
+                <h4 className="text-xl font-semibold mb-3 text-center">
+                  <span className="text-blue-500 text-2xl">
+                    Dental Billing Services
+                  </span>
+                </h4>
                 <p className="text-gray-600">
                   Maximize your revenue with our expert billing team handling all claims, appeals, and follow-ups for optimal reimbursements.
                 </p>
@@ -150,7 +146,11 @@ export default function Home() {
                 />
               </div>
               <div className="p-6 flex-1">
-                <h4 className="text-xl font-semibold mb-3 text-center">Dental Insurance Verification</h4>
+                <h4 className="text-xl font-semibold mb-3 text-center">
+                  <span className="text-blue-500 text-2xl">
+                    Dental Insurance Verification
+                  </span>
+                </h4>
                 <p className="text-gray-600">
                   Verify patient benefits before appointments to reduce claim denials and improve your practice's financial predictability.
                 </p>
@@ -169,7 +169,11 @@ export default function Home() {
                 />
               </div>
               <div className="p-6 flex-1">
-                <h4 className="text-xl font-semibold mb-3 text-center">Dental Credentialing Service</h4>
+                <h4 className="text-xl font-semibold mb-3 text-center">
+                  <span className="text-blue-500 text-2xl">
+                    Dental Credentialing Service
+                  </span>
+                </h4>
                 <p className="text-gray-600">
                   Streamline your provider enrollment process with our experts handling all paperwork, follow-ups and maintenance.
                 </p>
@@ -188,40 +192,99 @@ export default function Home() {
                 />
               </div>
               <div className="p-6 flex-1">
-                <h4 className="text-xl font-semibold mb-3 text-center">Dental AR Follow-Up</h4>
+                <h4 className="text-xl font-semibold mb-3 text-center">
+                  <span className="text-blue-500 text-2xl">
+                    Dental AR Follow-Up
+                  </span>
+                </h4>
                 <p className="text-gray-600">
                   Recover aging accounts receivable with our systematic approach to track, appeal, and collect outstanding payments.
                 </p>
               </div>
             </div>
           </div>
-
-
-          {/* Virtual Assistance Section - Styled Like Cards */}
-          <div className="mt-16">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl mx-auto">
-              <div className="w-full overflow-hidden">
+            
+          {/* Service 5 - Virtual Assistant - Wider card as it's alone in its row */}
+          <div className="mt-6">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col md:flex-row lg:w-1/2 mx-auto">
+              <div className="w-full md:w-1/2 h-56 md:h-auto overflow-hidden">
                 <Image
                   src="/images/Claim Masters Billing.zip - 5.png"
                   alt="Dental Virtual Assistance"
-                  width={1200}
-                  height={600}
-                  className="w-full object-cover"
+                  width={1024}
+                  height={750}
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="p-8">
-                <h2 className="text-2xl font-semibold mb-4 text-center">Streamline Your Practice with Virtual Assistance</h2>
-                <p className="text-gray-600 text-lg mb-6">
-                  Not only does our virtual assistant manage your dental billing and insurance claims, but it also schedules patient appointments, confirms visits, and handles frequently asked questions. By automating these tasks, it helps your practice stay efficient and your patients stay happy.
+              <div className="p-6 flex-1 md:flex md:flex-col md:justify-center">
+                <h4 className="text-xl font-semibold mb-3 text-center md:text-left">
+                  <span className="text-blue-500 text-2xl">
+                    Dental Virtual Assistant
+                  </span>
+                </h4>
+                <p className="text-gray-600">
+                  Let our virtual assistants handle scheduling, confirmations, and administrative tasks to increase efficiency and patient satisfaction.
                 </p>
-                <div className="text-center">
-                  <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
-                    Speak with Our Team
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
+
+          {/* About Section */}
+          <section className="mt-16 bg-white p-8 rounded-lg shadow-lg">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-center">About Claim Masters Dental Billing</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Claim Masters isn't just another billing company — we're your dedicated partner in dental practice success. By combining cutting-edge technology with a personalized touch, we've crafted a billing solution tailored specifically for dentists. Our team of billing experts and client success managers work hand-in-hand to deliver exceptional service that drives results for your practice.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                With over a decade of experience in the dental billing industry, we pride ourselves on our unwavering commitment to hard work, transparency, and attention to detail. We don't just process claims; we fight for your revenue, ensuring your practice thrives while you focus on delivering outstanding patient care.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
+                <p className="text-gray-600">
+                  To empower dental practices by handling the complexity of billing and administrative tasks so they can focus on patient care.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Our Values</h3>
+                <p className="text-gray-600">
+                  Integrity, excellence, and dedication to delivering exceptional results for every practice we serve.
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Our Reach</h3>
+                <p className="text-gray-600">
+                  Serving dental practices nationwide with customized billing and administrative solutions.
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
+                Get to Know Us
+              </Link>
+            </div>
+          </section>
         </div>
       </section>
 
