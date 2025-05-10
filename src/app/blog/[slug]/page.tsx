@@ -4,6 +4,7 @@ import Image from 'next/image';
 import WavyText from '../../../components/WavyText';
 import ScrollRevealText from '../../../components/ScrollRevealText';
 import AnimatedCard from '../../../components/AnimatedCard';
+import { Metadata } from 'next';
 
 // Blog post data - in a real app, this would come from a CMS or API
 const blogPosts = [
@@ -272,7 +273,13 @@ const blogPosts = [
   }
 ];
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = blogPosts.find((post) => post.slug === params.slug);
   
   if (!post) {
@@ -288,7 +295,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost({ params }: Props) {
   const post = blogPosts.find((post) => post.slug === params.slug);
   
   if (!post) {
