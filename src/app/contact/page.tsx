@@ -20,9 +20,11 @@ export default function Contact() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/images/ContactUs.webp')",
+            backgroundImage: "url('/images/optimized/dental-hygiene-bg.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            minHeight: '50vh',
             filter: 'blur(0px)',
           }}
         ></div>

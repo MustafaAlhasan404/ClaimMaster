@@ -69,7 +69,7 @@ export default function Blog() {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/images/blog-hero.jpg')",
+            backgroundImage: "url('/images/optimized/dental-clinic-bg.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             filter: 'blur(0px)',
