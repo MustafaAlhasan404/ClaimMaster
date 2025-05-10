@@ -8,6 +8,7 @@ import StaggeredText from '../components/StaggeredText';
 import TypewriterText from '../components/TypewriterText';
 import GradientText from '../components/GradientText';
 import AnimatedCard from '../components/AnimatedCard';
+import LogoCarousel from '../components/LogoCarousel';
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
                   alt="ClaimMasters Dental Billing Logo"
                   width={250}
                   height={250}
-                  className="h-24 w-auto"
+                  className="h-40 w-auto"
                 />
               </div>
               <div className="mb-6">
@@ -115,7 +116,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/billing-icon-BIG.webp"
+                  src="/images/الصورة 1 insurance billing .png"
                   alt="Dental Billing Service"
                   width={1024}
                   height={750}
@@ -138,7 +139,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/insurance-verification-icon.webp"
+                  src="/images/الصورة 2 insurance verification .png"
                   alt="Dental Insurance Verification"
                   width={1024}
                   height={750}
@@ -161,7 +162,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/Claim Masters Billing.zip - 6.webp"
+                  src="/images/الصورة 4 insurance credentials .png"
                   alt="Dental Credentialing Service"
                   width={1024}
                   height={750}
@@ -184,7 +185,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
               <div className="w-full h-56 overflow-hidden">
                 <Image
-                  src="/images/Claim Masters Billing.zip - 4.webp"
+                  src="/images/الصورة 3 AR Report .png"
                   alt="Dental AR Follow-Up"
                   width={1024}
                   height={750}
@@ -210,7 +211,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/3 h-64 md:h-auto overflow-hidden">
                   <Image
-                    src="/images/Claim Masters Billing.zip - 5.webp"
+                    src="/images/الصورة 5 virtual assistants .png"
                     alt="Dental Virtual Assistance"
                     width={1024}
                     height={750}
@@ -239,60 +240,21 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Logo Carousel Section */}
+          <div className="mt-24 mb-8">
+            <LogoCarousel />
+          </div>
+
           {/* About Section */}
           <section className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-            <div className="mb-8">
+            <div>
               <h2 className="text-3xl font-bold mb-6 text-center">About Claim Masters Dental Billing</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Claim Masters isn't just another billing company — we're your dedicated partner in dental practice success. By combining cutting-edge technology with a personalized touch, we've crafted a billing solution tailored specifically for dentists. Our team of billing experts and client success managers work hand-in-hand to deliver exceptional service that drives results for your practice.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700">
                 With over a decade of experience in the dental billing industry, we pride ourselves on our unwavering commitment to hard work, transparency, and attention to detail. We don't just process claims; we fight for your revenue, ensuring your practice thrives while you focus on delivering outstanding patient care.
               </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-                <p className="text-gray-600">
-                  To empower dental practices by handling the complexity of billing and administrative tasks so they can focus on patient care.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Our Values</h3>
-                <p className="text-gray-600">
-                  Integrity, excellence, and dedication to delivering exceptional results for every practice we serve.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-blue-50 rounded-full p-6 w-24 h-24 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Our Reach</h3>
-                <p className="text-gray-600">
-                  Serving dental practices nationwide with customized billing and administrative solutions.
-                </p>
-              </div>
-            </div>
-            
-            <div className="text-center mt-8">
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-medium transition-colors inline-block">
-                Get to Know Us
-              </Link>
             </div>
           </section>
         </div>

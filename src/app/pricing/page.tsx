@@ -29,7 +29,7 @@ export default function Pricing() {
         ></div>
         {/* Overlay for contrast */}
         <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto relative z-10 h-full flex flex-col justify-between">
           <div className="max-w-3xl mx-auto text-center text-white">
             <WavyText 
               text="Pricing & Plans"
@@ -39,10 +39,12 @@ export default function Pricing() {
               waveHeight={25}
               duration={1.2}
             />
+          </div>
+          <div className="text-white mt-16 md:mt-24 md:ml-10 max-w-md">
             <ScrollRevealText
               text="Customized and affordable solutions designed to fit your practice's unique needs"
-              className="text-lg md:text-xl mb-8 leading-relaxed"
-              fromDirection="bottom"
+              className="text-lg md:text-xl leading-relaxed text-left"
+              fromDirection="left"
               threshold={0.2}
               staggerDelay={0.02}
             />
@@ -85,9 +87,9 @@ export default function Pricing() {
                   ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white" 
                   : "bg-blue-50 hover:bg-blue-100 text-blue-800"}`}>
                 <div className="flex flex-col items-center text-center p-2">
-                  <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide mb-2">Dental Insurance Billing</h3>
+                  <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide mb-2">Dental Credentialing</h3>
                   <p className={`text-sm ${activeTab === "insurance" ? "text-blue-100" : "text-blue-600"}`}>
-                    Commercial PPO & HMO
+                    Provider enrollment & contracting
                   </p>
                 </div>
               </div>
@@ -173,19 +175,19 @@ export default function Pricing() {
             </div>
           )}
 
-          {/* Create a section for dental insurance billing (commercial) */}
+          {/* Create a section for dental credentialing */}
           {activeTab === "insurance" && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
                 <MagnifyingText 
-                  text="Dental Insurance Billing"
+                  text="Dental Credentialing"
                   className="text-3xl md:text-4xl font-bold text-blue-800 mb-4"
                   fontSize="2.5rem"
                   magnifyScale={1.3}
                   hoverColor="#2563EB"
                 />
                 <ScrollRevealText
-                  text="Comprehensive insurance billing services for your dental practice"
+                  text="Comprehensive provider enrollment and insurance contracting services for your dental practice"
                   className="text-lg text-blue-700 max-w-3xl mx-auto"
                   fromDirection="bottom"
                 />
@@ -193,11 +195,11 @@ export default function Pricing() {
               
               <AnimatedCard className="max-w-md mx-auto bg-white rounded-xl shadow-xl overflow-hidden border border-blue-100 mb-12 transform hover:scale-105 transition-transform duration-300" delay={0.3}>
                 <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-center">
-                  <h3 className="text-xl font-bold text-white">Commercial</h3>
+                  <h3 className="text-xl font-bold text-white">Provider Enrollment</h3>
                 </div>
                 <div className="p-8 text-center">
                   <div className="text-5xl font-bold text-blue-600 mb-4">$199</div>
-                  <p className="text-blue-700 mb-6">For both PPO and HMO</p>
+                  <p className="text-blue-700 mb-6">Per insurance application</p>
                 </div>
               </AnimatedCard>
 

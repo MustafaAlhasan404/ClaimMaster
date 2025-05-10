@@ -32,7 +32,10 @@ const Header = () => {
             height={200} 
             className="h-10 w-auto"
           />
-          <span className="text-lg md:text-xl font-bold text-blue-600">ClaimMasters Dental Billing</span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-lg md:text-2xl font-bold text-blue-600">ClaimMasters</span>
+            <span className="text-sm md:text-lg font-semibold text-gray-600">Dental Billing</span>
+          </span>
         </Link>
 
         {/* Mobile menu button */}
@@ -97,6 +100,10 @@ const Header = () => {
               </div>
             </div>
           </div>
+          <Link href="/blog" className="hover:text-blue-600 font-medium relative group">
+            Blog
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+          </Link>
           <Link href="/contact" className="hover:text-blue-600 font-medium relative group">
             Contact
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
@@ -189,6 +196,15 @@ const Header = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.2, delay: 0.2 }}
+                >
+                  <Link href="/blog" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
+                    Blog
+                  </Link>
+                </m.div>
+                <m.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: 0.25 }}
                 >
                   <Link href="/contact" className="py-2 hover:text-blue-600 font-medium block transition-colors duration-200">
                     Contact

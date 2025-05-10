@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 pt-8 text-center text-sm">
-          <p>© {new Date().getFullYear()} ClaimMasters Dental Billing | All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} ClaimMasters <br className="sm:hidden" />Dental Billing | All Rights Reserved.</p>
         </div>
       </div>
     </footer>
