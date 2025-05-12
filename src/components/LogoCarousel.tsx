@@ -6,44 +6,38 @@ import { m, AnimatePresence } from 'framer-motion';
 
 const logos = [
   {
-    name: 'Denticon',
-    src: 'https://www.planetdds.com/wp-content/uploads/2022/03/denticon-logo.svg',
+    name: 'Dentrix',
+    src: '/images/logos/Dentrix.png',
     width: 180, 
     height: 60
   },
   {
     name: 'Practice-Web',
-    src: 'https://practiceweb.com/wp-content/uploads/2022/12/Practice-Web-Logo-300x100-1.png',
+    src: '/images/logos/Practice web .png',
     width: 200,
     height: 60
   },
   {
-    name: 'Dentrix',
-    src: 'https://www.dentrix.com/images/branding/HSPSLogos/rgb/dentrix-logo-rgb-hires.png',
-    width: 180,
-    height: 60
-  },
-  {
-    name: 'OpenDental',
-    src: 'https://www.opendental.com/img/ODLogo.png',
+    name: 'Open Dental',
+    src: '/images/logos/Open dental .png',
     width: 200,
     height: 60
   },
   {
     name: 'Eaglesoft',
-    src: 'https://www.pattersondental.com/Media/Default/products/Practice-Management/Eaglesoft_logo.png',
+    src: '/images/logos/Egale soft .png',
     width: 180,
     height: 60
   },
   {
-    name: 'Curve Dental',
-    src: 'https://www.curvedental.com/hubfs/raw_assets/public/Curve-Dental-Oct2022/images/curve-hero-logo.svg',
+    name: 'Idental Software',
+    src: '/images/logos/Idental software .png',
     width: 180,
     height: 60
   },
   {
     name: 'Dentrix Ascend',
-    src: 'https://www.dentrixascend.com/Themes/Default/Content/Images/DA_Logo.svg',
+    src: '/images/logos/Dentrix asc.png',
     width: 200,
     height: 60
   }
@@ -78,6 +72,8 @@ const LogoCarousel: React.FC = () => {
                 width={logo.width} 
                 height={logo.height}
                 className="grayscale hover:grayscale-0 transition-all duration-300"
+                quality={90}
+                priority={index < 3}
               />
             </m.div>
           ))}
@@ -95,6 +91,7 @@ const LogoCarousel: React.FC = () => {
                 width={logo.width} 
                 height={logo.height}
                 className="grayscale hover:grayscale-0 transition-all duration-300"
+                quality={90}
               />
             </m.div>
           ))}
