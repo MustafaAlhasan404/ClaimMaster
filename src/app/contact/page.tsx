@@ -74,7 +74,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Address</h3>
-                    <p className="text-gray-600">San Diego, CA 92019</p>
+                    <p className="text-gray-600">San Diego, CA 92109</p>
                   </div>
                 </div>
                 
@@ -86,8 +86,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
-                    <a href="mailto:info@claimmastersdentalbilling.com" className="text-blue-600 hover:underline">
-                      info@claimmastersdentalbilling.com
+                    <a href="mailto:info@yourclaimmasters.com" className="text-blue-600 hover:underline">
+                      info@yourclaimmasters.com
                     </a>
                   </div>
                 </div>
@@ -100,9 +100,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                    <a href="tel:+17079934501" className="text-blue-600 hover:underline">
-                      +17079934501
-                    </a>
+                    <p className="mb-4">(707) 993-4501</p>
                   </div>
                 </div>
                 <div className="mt-12">
@@ -140,14 +138,14 @@ export default function Contact() {
           />
           <div className="aspect-[16/9] max-w-4xl mx-auto bg-gray-200 rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps?q=San+Diego,+CA+92019&output=embed"
+              src="https://www.google.com/maps?q=San+Diego,+CA+92109&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="San Diego, CA 92019 Map"
+              title="San Diego, CA 92109 Map"
             ></iframe>
           </div>
         </div>

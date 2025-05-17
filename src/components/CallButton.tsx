@@ -7,7 +7,7 @@ interface CallButtonProps {
   phoneNumber: string;
 }
 
-export default function CallButton({ phoneNumber = '+17079934501' }: CallButtonProps) {
+export default function CallButton({ phoneNumber }: CallButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {

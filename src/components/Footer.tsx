@@ -35,17 +35,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <address className="not-italic">
-              <p className="mb-4">San Diego, CA 92019</p>
+              <p className="mb-4">San Diego, CA 92109</p>
+              <p className="mb-4">(707) 993-4501</p>
               
               <p className="mb-2">
-                <a href="mailto:info@claimmastersdentalbilling.com" className="hover:text-blue-300">
-                  info@claimmastersdentalbilling.com
-                </a>
-              </p>
-              
-              <p>
-                <a href="tel:+17079934501" className="hover:text-blue-300">
-                  +17079934501
+                <a href="mailto:info@yourclaimmasters.com" className="hover:text-blue-300">
+                  info@yourclaimmasters.com
                 </a>
               </p>
             </address>

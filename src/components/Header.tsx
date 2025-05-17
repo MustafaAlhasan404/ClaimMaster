@@ -32,9 +32,9 @@ const Header = () => {
             height={200} 
             className="h-10 w-auto"
           />
-          <span className="flex flex-col leading-tight">
-            <span className="text-lg md:text-2xl font-bold text-blue-600">ClaimMasters</span>
-            <span className="text-sm md:text-lg font-semibold text-gray-600">Dental Billing</span>
+          <span className="flex flex-col items-center leading-tight">
+            <span className="text-lg md:text-2xl font-bold text-blue-600">Claim Masters</span>
+            <span className="text-sm md:text-lg font-semibold text-gray-600 text-center">Dental Billing</span>
           </span>
         </Link>
 

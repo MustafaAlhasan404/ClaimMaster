@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import CallButton from "../components/CallButton";
 import { Providers } from "./providers";
 
 const inter = Inter({
@@ -28,7 +27,6 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
-          <CallButton phoneNumber="+17079934501" />
         </Providers>
       </body>
     </html>

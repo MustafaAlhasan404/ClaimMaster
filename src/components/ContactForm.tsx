@@ -23,7 +23,7 @@ Phone: ${phone}
 Service: ${service}
 Message: ${message}
     `);
-    window.location.href = `mailto:Info@yourclaimmasters.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@yourclaimmasters.com?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
