@@ -22,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/Asset 1 2.webp" type="image/webp" />
+      </head>
       <body className={`${inter.variable} font-sans`}>
         <Providers>
           <Header />
